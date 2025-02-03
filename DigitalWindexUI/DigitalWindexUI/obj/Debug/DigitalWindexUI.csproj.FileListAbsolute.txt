@@ -1,0 +1,10 @@
+C:\Users\kaavy\Desktop\Soft.Dev.Project\DigitalWindexUI\DigitalWindexUI\bin\Debug\DigitalWindexUI.exe.config
+C:\Users\kaavy\Desktop\Soft.Dev.Project\DigitalWindexUI\DigitalWindexUI\bin\Debug\DigitalWindexUI.exe
+C:\Users\kaavy\Desktop\Soft.Dev.Project\DigitalWindexUI\DigitalWindexUI\bin\Debug\DigitalWindexUI.pdb
+C:\Users\kaavy\Desktop\Soft.Dev.Project\DigitalWindexUI\DigitalWindexUI\obj\Debug\DigitalWindexUI.csproj.AssemblyReference.cache
+C:\Users\kaavy\Desktop\Soft.Dev.Project\DigitalWindexUI\DigitalWindexUI\obj\Debug\DigitalWindexUI.Properties.Resources.resources
+C:\Users\kaavy\Desktop\Soft.Dev.Project\DigitalWindexUI\DigitalWindexUI\obj\Debug\DigitalWindexUI.csproj.GenerateResource.cache
+C:\Users\kaavy\Desktop\Soft.Dev.Project\DigitalWindexUI\DigitalWindexUI\obj\Debug\DigitalWindexUI.csproj.CoreCompileInputs.cache
+C:\Users\kaavy\Desktop\Soft.Dev.Project\DigitalWindexUI\DigitalWindexUI\obj\Debug\DigitalWindexUI.exe
+C:\Users\kaavy\Desktop\Soft.Dev.Project\DigitalWindexUI\DigitalWindexUI\obj\Debug\DigitalWindexUI.pdb
+C:\Users\kaavy\Desktop\Soft.Dev.Project\DigitalWindexUI\DigitalWindexUI\obj\Debug\DesktopApp.Form1.resources

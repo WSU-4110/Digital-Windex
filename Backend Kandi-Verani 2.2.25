@@ -1,0 +1,11 @@
+using System;
+using System.Diagnostics;
+//no task version
+string dism1text;
+dism1text = " /online /cleanup-image /scanhealth";
+System.Diagnostics.Process.Start("DISM.exe", dism1text);
+
+
+string SFCtext;
+SFCtext = "/k sfc /scannow";
+System.Diagnostics.Process.Start("cmd.exe", SFCtext);

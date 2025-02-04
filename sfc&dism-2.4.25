@@ -1,0 +1,23 @@
+// See https://aka.ms/new-console-template for more information
+using System;
+using System.Diagnostics;
+
+//no task version
+string SFCtext;
+SFCtext = "/k sfc /scannow";
+Process sfcProcess = new Process();
+sfcProcess.StartInfo.FileName = "cmd.exe";
+sfcProcess.StartInfo.Arguments = SFCtext;
+
+
+string dismtext;
+dismtext = "/k DISM /online /cleanup-image /scanhealth";
+Process dismProcess = new Process();
+dismProcess.StartInfo.FileName = "cmd.exe";
+dismProcess.StartInfo.Arguments = dismtext;
+
+sfcProcess.Start();
+sfcProcess.WaitForExit();
+dismProcess.Start();
+
+

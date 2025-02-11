@@ -102,7 +102,7 @@
             this.lblDescription.Name = "lblDescription";
             this.lblDescription.Size = new System.Drawing.Size(165, 18);
             this.lblDescription.TabIndex = 2;
-            this.lblDescription.Text = "Simple Description .....";
+            this.lblDescription.Text = "Digital Windex is an all-in-one Windows maintenance tool that automates system updates, diagnostics, malware scanning, and file cleanup to keep your PC running smoothly.";
             // 
             // Form1
             // 

@@ -18,3 +18,13 @@ C:\Users\Angelo K\Source\Repos\Digital-Windex-App\DigitalWindexUI\DigitalWindexU
 C:\Users\Angelo K\Source\Repos\Digital-Windex-App\DigitalWindexUI\DigitalWindexUI\obj\Debug\DigitalWindexUI.csproj.CoreCompileInputs.cache
 C:\Users\Angelo K\Source\Repos\Digital-Windex-App\DigitalWindexUI\DigitalWindexUI\obj\Debug\DigitalWindexUI.exe
 C:\Users\Angelo K\Source\Repos\Digital-Windex-App\DigitalWindexUI\DigitalWindexUI\obj\Debug\DigitalWindexUI.pdb
+C:\Users\Angelo K\source\repos\Digital-Windex\DigitalWindex\DigitalWindex\bin\Debug\DigitalWindexUI.exe.config
+C:\Users\Angelo K\source\repos\Digital-Windex\DigitalWindex\DigitalWindex\bin\Debug\DigitalWindexUI.exe
+C:\Users\Angelo K\source\repos\Digital-Windex\DigitalWindex\DigitalWindex\bin\Debug\DigitalWindexUI.pdb
+C:\Users\Angelo K\source\repos\Digital-Windex\DigitalWindex\DigitalWindex\obj\Debug\DigitalWindexUI.csproj.AssemblyReference.cache
+C:\Users\Angelo K\source\repos\Digital-Windex\DigitalWindex\DigitalWindex\obj\Debug\DesktopApp.Form1.resources
+C:\Users\Angelo K\source\repos\Digital-Windex\DigitalWindex\DigitalWindex\obj\Debug\DigitalWindexUI.Properties.Resources.resources
+C:\Users\Angelo K\source\repos\Digital-Windex\DigitalWindex\DigitalWindex\obj\Debug\DigitalWindexUI.csproj.GenerateResource.cache
+C:\Users\Angelo K\source\repos\Digital-Windex\DigitalWindex\DigitalWindex\obj\Debug\DigitalWindexUI.csproj.CoreCompileInputs.cache
+C:\Users\Angelo K\source\repos\Digital-Windex\DigitalWindex\DigitalWindex\obj\Debug\DigitalWindexUI.exe
+C:\Users\Angelo K\source\repos\Digital-Windex\DigitalWindex\DigitalWindex\obj\Debug\DigitalWindexUI.pdb

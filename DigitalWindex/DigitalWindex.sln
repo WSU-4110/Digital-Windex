@@ -1,9 +1,23 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35707.178 d17.12
+VisualStudioVersion = 17.12.35707.178
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigitalWindexUI", "DigitalWindexUI\DigitalWindexUI.csproj", "{6B2A8F24-4B44-4378-95BC-4F94729DA8B2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigitalWindexUI", "DigitalWindex\DigitalWindexUI.csproj", "{6B2A8F24-4B44-4378-95BC-4F94729DA8B2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Backend", "Backend", "{9934C4D8-B584-408C-BCA7-204BC851F823}"
+	ProjectSection(SolutionItems) = preProject
+		SFC_DISM.cs = SFC_DISM.cs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Frontend", "Frontend", "{CFACD336-87FB-4682-802F-04298007E8CB}"
+	ProjectSection(SolutionItems) = preProject
+		DigitalWindex\CleanCorruptionForm.cs = DigitalWindex\CleanCorruptionForm.cs
+		DigitalWindex\CleanCorruptionForm.Designer.cs = DigitalWindex\CleanCorruptionForm.Designer.cs
+		DigitalWindex\Form1.cs = DigitalWindex\Form1.cs
+		DigitalWindex\Form1.Designer.cs = DigitalWindex\Form1.Designer.cs
+		DigitalWindex\Form1.resx = DigitalWindex\Form1.resx
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

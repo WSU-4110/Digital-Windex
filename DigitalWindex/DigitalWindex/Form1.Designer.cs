@@ -2,25 +2,14 @@
 {
     partial class Form1
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
-
         private System.Windows.Forms.Panel sidePanel;
         private System.Windows.Forms.Panel mainPanel;
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Label lblWelcome;
         private System.Windows.Forms.Label lblDescription;
-
         private System.Windows.Forms.Button[] sideButtons;
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">
-        /// true if managed resources should be disposed; otherwise, false.
-        /// </param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -32,10 +21,6 @@
 
         #region Windows Form Designer generated code
 
-        /// <summary>
-        /// Method required for Designer support.
-        /// Do not modify the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
             this.sidePanel = new System.Windows.Forms.Panel();
@@ -119,7 +104,6 @@
             this.mainPanel.ResumeLayout(false);
             this.mainPanel.PerformLayout();
             this.ResumeLayout(false);
-
         }
 
         #endregion

@@ -15,6 +15,7 @@ namespace DesktopApp
                 CreateSidebarButtons();
             }
         }
+
         private bool IsInDesignMode()
         {
             return LicenseManager.UsageMode == LicenseUsageMode.Designtime;
@@ -42,7 +43,6 @@ namespace DesktopApp
                     ForeColor = Color.White,
                     FlatStyle = FlatStyle.Flat
                 };
-
                 if (buttonNames[i] == "Clean Corruption")
                 {
                     sideButtons[i].Click += CleanCorruptionButton_Click;
@@ -51,11 +51,13 @@ namespace DesktopApp
                 this.sidePanel.Controls.Add(sideButtons[i]);
             }
         }
+
         private void CleanCorruptionButton_Click(object sender, EventArgs e)
         {
             CleanCorruptionForm cleanForm = new CleanCorruptionForm();
             cleanForm.Show();
         }
+
         private void Form1_Load(object sender, EventArgs e)
         {
             this.Text = "Digital Windex";

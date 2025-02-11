@@ -1,0 +1,143 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Angelo K\\source\\repos\\Digital-Windex-App\\DigitalWindexUI\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6B2A8F24-4B44-4378-95BC-4F94729DA8B2}|DigitalWindexUI\\DigitalWindexUI.csproj|c:\\users\\angelo k\\source\\repos\\digital-windex-app\\digitalwindexui\\digitalwindexui\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{6B2A8F24-4B44-4378-95BC-4F94729DA8B2}|DigitalWindexUI\\DigitalWindexUI.csproj|solutionrelative:digitalwindexui\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6B2A8F24-4B44-4378-95BC-4F94729DA8B2}|DigitalWindexUI\\DigitalWindexUI.csproj|c:\\users\\angelo k\\source\\repos\\digital-windex-app\\digitalwindexui\\digitalwindexui\\cleancorruptionform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B2A8F24-4B44-4378-95BC-4F94729DA8B2}|DigitalWindexUI\\DigitalWindexUI.csproj|solutionrelative:digitalwindexui\\cleancorruptionform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6B2A8F24-4B44-4378-95BC-4F94729DA8B2}|DigitalWindexUI\\DigitalWindexUI.csproj|c:\\users\\angelo k\\source\\repos\\digital-windex-app\\digitalwindexui\\digitalwindexui\\cleancorruptionform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B2A8F24-4B44-4378-95BC-4F94729DA8B2}|DigitalWindexUI\\DigitalWindexUI.csproj|solutionrelative:digitalwindexui\\cleancorruptionform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|DigitalWindexUI||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6B2A8F24-4B44-4378-95BC-4F94729DA8B2}|DigitalWindexUI\\DigitalWindexUI.csproj|C:\\Users\\Angelo K\\source\\repos\\Digital-Windex-App\\DigitalWindexUI\\digitalwindexui\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B2A8F24-4B44-4378-95BC-4F94729DA8B2}|DigitalWindexUI\\DigitalWindexUI.csproj|solutionrelative:digitalwindexui\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6B2A8F24-4B44-4378-95BC-4F94729DA8B2}|DigitalWindexUI\\DigitalWindexUI.csproj|C:\\Users\\Angelo K\\source\\repos\\Digital-Windex-App\\DigitalWindexUI\\digitalwindexui\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B2A8F24-4B44-4378-95BC-4F94729DA8B2}|DigitalWindexUI\\DigitalWindexUI.csproj|solutionrelative:digitalwindexui\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6B2A8F24-4B44-4378-95BC-4F94729DA8B2}|DigitalWindexUI\\DigitalWindexUI.csproj|C:\\Users\\Angelo K\\source\\repos\\Digital-Windex-App\\DigitalWindexUI\\digitalwindexui\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{6B2A8F24-4B44-4378-95BC-4F94729DA8B2}|DigitalWindexUI\\DigitalWindexUI.csproj|solutionrelative:digitalwindexui\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6B2A8F24-4B44-4378-95BC-4F94729DA8B2}|DigitalWindexUI\\DigitalWindexUI.csproj|c:\\users\\angelo k\\source\\repos\\digital-windex-app\\digitalwindexui\\digitalwindexui\\||{B270807C-D8C6-49EB-8EBE-8E8D566637A1}|5e9a8ac2-4f34-4521-858f-4c248ba31532"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DigitalWindexUI",
+              "DocumentMoniker": "C:\\Users\\Angelo K\\Source\\Repos\\Digital-Windex-App\\DigitalWindexUI\\DigitalWindexUI\\DigitalWindexUI.csproj",
+              "RelativeDocumentMoniker": "DigitalWindexUI\\DigitalWindexUI.csproj",
+              "ToolTip": "C:\\Users\\Angelo K\\Source\\Repos\\Digital-Windex-App\\DigitalWindexUI\\DigitalWindexUI\\DigitalWindexUI.csproj",
+              "RelativeToolTip": "DigitalWindexUI\\DigitalWindexUI.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-02-11T04:59:07.685Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CleanCorruptionForm.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Angelo K\\Source\\Repos\\Digital-Windex-App\\DigitalWindexUI\\DigitalWindexUI\\CleanCorruptionForm.Designer.cs",
+              "RelativeDocumentMoniker": "DigitalWindexUI\\CleanCorruptionForm.Designer.cs",
+              "ToolTip": "C:\\Users\\Angelo K\\Source\\Repos\\Digital-Windex-App\\DigitalWindexUI\\DigitalWindexUI\\CleanCorruptionForm.Designer.cs",
+              "RelativeToolTip": "DigitalWindexUI\\CleanCorruptionForm.Designer.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAgwB4AAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-11T03:44:35.792Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "App.config",
+              "DocumentMoniker": "C:\\Users\\Angelo K\\source\\repos\\Digital-Windex-App\\DigitalWindexUI\\DigitalWindexUI\\App.config",
+              "RelativeDocumentMoniker": "DigitalWindexUI\\App.config",
+              "ToolTip": "C:\\Users\\Angelo K\\source\\repos\\Digital-Windex-App\\DigitalWindexUI\\DigitalWindexUI\\App.config",
+              "RelativeToolTip": "DigitalWindexUI\\App.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2025-02-11T03:11:40.525Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CleanCorruptionForm.cs",
+              "DocumentMoniker": "C:\\Users\\Angelo K\\source\\repos\\Digital-Windex-App\\DigitalWindexUI\\DigitalWindexUI\\CleanCorruptionForm.cs",
+              "RelativeDocumentMoniker": "DigitalWindexUI\\CleanCorruptionForm.cs",
+              "ToolTip": "C:\\Users\\Angelo K\\source\\repos\\Digital-Windex-App\\DigitalWindexUI\\DigitalWindexUI\\CleanCorruptionForm.cs",
+              "RelativeToolTip": "DigitalWindexUI\\CleanCorruptionForm.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-10T04:01:27.417Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\Angelo K\\source\\repos\\Digital-Windex-App\\DigitalWindexUI\\DigitalWindexUI\\Form1.cs",
+              "RelativeDocumentMoniker": "DigitalWindexUI\\Form1.cs",
+              "ToolTip": "C:\\Users\\Angelo K\\source\\repos\\Digital-Windex-App\\DigitalWindexUI\\DigitalWindexUI\\Form1.cs",
+              "RelativeToolTip": "DigitalWindexUI\\Form1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADIAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-10T02:35:18.292Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Form1.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Angelo K\\source\\repos\\Digital-Windex-App\\DigitalWindexUI\\DigitalWindexUI\\Form1.Designer.cs",
+              "RelativeDocumentMoniker": "DigitalWindexUI\\Form1.Designer.cs",
+              "ToolTip": "C:\\Users\\Angelo K\\source\\repos\\Digital-Windex-App\\DigitalWindexUI\\DigitalWindexUI\\Form1.Designer.cs",
+              "RelativeToolTip": "DigitalWindexUI\\Form1.Designer.cs",
+              "ViewState": "AgIAAGIAAAAAAAAAAAAQwG4AAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-10T02:27:03.546Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Angelo K\\source\\repos\\Digital-Windex-App\\DigitalWindexUI\\DigitalWindexUI\\Form1.cs",
+              "RelativeDocumentMoniker": "DigitalWindexUI\\Form1.cs",
+              "ToolTip": "C:\\Users\\Angelo K\\source\\repos\\Digital-Windex-App\\DigitalWindexUI\\DigitalWindexUI\\Form1.cs [Design]",
+              "RelativeToolTip": "DigitalWindexUI\\Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-10T02:26:22.762Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

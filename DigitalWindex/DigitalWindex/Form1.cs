@@ -43,13 +43,29 @@ namespace DesktopApp
                     ForeColor = Color.White,
                     FlatStyle = FlatStyle.Flat
                 };
-                if (buttonNames[i] == "Clean Corruption")
+
+                if (buttonNames[i] == "Diagnostics")
+                {
+                    sideButtons[i].Click += DiagnosticsButton_Click;
+                }
+                else if (buttonNames[i] == "Clean Corruption")
                 {
                     sideButtons[i].Click += CleanCorruptionButton_Click;
                 }
 
                 this.sidePanel.Controls.Add(sideButtons[i]);
             }
+        }
+
+        private void DiagnosticsButton_Click(object sender, EventArgs e)
+        {
+            // Clear existing controls in mainPanel
+            mainPanel.Controls.Clear();
+
+            // Create and load the DiagnosticsControl
+            DiagnosticsControl diagnosticsControl = new DiagnosticsControl();
+            diagnosticsControl.Dock = DockStyle.Fill;
+            mainPanel.Controls.Add(diagnosticsControl);
         }
 
         private void CleanCorruptionButton_Click(object sender, EventArgs e)
@@ -64,9 +80,15 @@ namespace DesktopApp
             this.lblWelcome.Text = "Hello " + Environment.UserName + "!";
         }
 
-        private void Button1_Click(object sender, EventArgs e)
+        private void mainPanel_Paint(object sender, PaintEventArgs e)
         {
-            MessageBox.Show("Hello, World!");
+            // Optional: Add custom painting logic here if needed
         }
+
+        private void lblDescription_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Description clicked!");
+        }
+
     }
 }

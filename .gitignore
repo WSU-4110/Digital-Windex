@@ -4,3 +4,6 @@
 
 /.vs
 /DigitalWindexUI/.vs/DigitalWindexUI
+/.exe
+/.pdb
+/.cache

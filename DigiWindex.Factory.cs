@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics;
@@ -34,10 +34,24 @@ public interface Task_ProductInterface
     //each task will have a starting directory and a 
 }
 
-//Concrete Creator
-abstract class Concrete_Creator
+//Concrete Creators
+abstract class abstract class TaskNoWarnings_Concrete_Creator
 {
     public abstract Task_ProductInterface createTask(string startdir, string arguments)
+    {
+        startdir = Path.Combine(Environment.SystemDirectory, startdir);
+    }
+}Concrete_Creator
+{
+    public abstract Task_ProductInterface createTaskNoWarnings(string startdir, string arguments)
+    {
+        startdir = Path.Combine(Environment.SystemDirectory, startdir);
+    }
+}
+
+abstract class TaskYesWarnings_Concrete_Creator
+{
+    public abstract Task_ProductInterface createTaskYesWarnings(string startdir, string arguments)
     {
         startdir = Path.Combine(Environment.SystemDirectory, startdir);
     }

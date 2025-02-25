@@ -10,7 +10,7 @@ public interface Task_ProductInterface
 {
     String startdir;
     //function to run command applies to all tasks
-    private void RunCommandDirectly(string startdir, string arguments)
+    public void RunCommandDirectly(string startdir, string arguments)
     {
            ProcessStartInfo processInfo = new ProcessStartInfo
            {

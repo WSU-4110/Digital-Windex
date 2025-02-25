@@ -37,12 +37,6 @@ public interface Task_ProductInterface
 //Concrete Creators
 abstract class abstract class TaskNoWarnings_Concrete_Creator
 {
-    public abstract Task_ProductInterface createTask(string startdir, string arguments)
-    {
-        startdir = Path.Combine(Environment.SystemDirectory, startdir);
-    }
-}Concrete_Creator
-{
     public abstract Task_ProductInterface createTaskNoWarnings(string startdir, string arguments)
     {
         startdir = Path.Combine(Environment.SystemDirectory, startdir);

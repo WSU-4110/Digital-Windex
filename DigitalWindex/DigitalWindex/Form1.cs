@@ -13,6 +13,7 @@ namespace DesktopApp
             if (!IsInDesignMode())
             {
                 CreateSidebarButtons();
+                LoadHomePage();
             }
         }
 
@@ -44,7 +45,11 @@ namespace DesktopApp
                     FlatStyle = FlatStyle.Flat
                 };
 
-                if (buttonNames[i] == "Diagnostics")
+                if (buttonNames[i] == "Home")
+                {
+                    sideButtons[i].Click += HomeButton_Click;
+                }
+                else if (buttonNames[i] == "Diagnostics")
                 {
                     sideButtons[i].Click += DiagnosticsButton_Click;
                 }
@@ -57,6 +62,23 @@ namespace DesktopApp
             }
         }
 
+        private void HomeButton_Click(object sender, EventArgs e)
+        {
+            LoadHomePage(); // Restore the default Form1 layout when clicking Home
+            mainPanel.Controls.Add(lblTitle);
+            mainPanel.Controls.Add(lblWelcome);
+            mainPanel.Controls.Add(lblDescription);
+        }
+
+        private void LoadHomePage()
+        {
+            mainPanel.Controls.Clear(); // Clear existing content
+
+            // Re-add Form1's original labels and content
+            mainPanel.Controls.Add(lblTitle);
+            mainPanel.Controls.Add(lblWelcome);
+            mainPanel.Controls.Add(lblDescription);
+        }
         private void DiagnosticsButton_Click(object sender, EventArgs e)
         {
             // Clear existing controls in mainPanel
@@ -70,14 +92,19 @@ namespace DesktopApp
 
         private void CleanCorruptionButton_Click(object sender, EventArgs e)
         {
-            CleanCorruptionForm cleanForm = new CleanCorruptionForm();
-            cleanForm.Show();
+            mainPanel.Controls.Clear(); // Remove existing content
+
+            // Load the Clean Corruption page inside mainPanel
+            CleanCorruptionForm cleanControl = new CleanCorruptionForm();
+            cleanControl.Dock = DockStyle.Fill;
+            mainPanel.Controls.Add(cleanControl);
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
             this.Text = "Digital Windex";
             this.lblWelcome.Text = "Hello " + Environment.UserName + "!";
+            LoadHomePage();
         }
 
         private void mainPanel_Paint(object sender, PaintEventArgs e)

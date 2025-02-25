@@ -47,7 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CleanCorruptionForm.cs">
-      <SubType>Form</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="CleanCorruptionForm.Designer.cs">
       <DependentUpon>CleanCorruptionForm.cs</DependentUpon>

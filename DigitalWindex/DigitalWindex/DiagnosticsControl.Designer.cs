@@ -52,6 +52,7 @@
             this.Controls.Add(this.lblTitle);
             this.Name = "DiagnosticsControl";
             this.Size = new System.Drawing.Size(1005, 600);
+            this.Load += new System.EventHandler(this.DiagnosticsControl_Load_1);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -15,5 +15,10 @@ namespace DesktopApp
             // Add initialization code for DiagnosticsControl here.
             this.Dock = DockStyle.Fill;  // Ensure it fills the panel.
         }
+
+        private void DiagnosticsControl_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -1,4 +1,6 @@
-﻿namespace DesktopApp
+﻿using System.Windows.Forms;
+
+namespace DesktopApp
 {
     partial class Form1
     {
@@ -30,7 +32,9 @@
             this.lblDescription = new System.Windows.Forms.Label();
             this.mainPanel.SuspendLayout();
             this.SuspendLayout();
-            // 
+            //
+           
+
             // sidePanel
             // 
             this.sidePanel.BackColor = System.Drawing.Color.MediumPurple;
@@ -55,6 +59,8 @@
             this.mainPanel.TabIndex = 1;
             this.mainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.mainPanel_Paint);
             // 
+
+
             // lblTitle
             // 
             this.lblTitle.AutoSize = true;

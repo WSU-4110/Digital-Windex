@@ -47,7 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CleanCorruptionForm.cs">
-      <SubType>Form</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="CleanCorruptionForm.Designer.cs">
       <DependentUpon>CleanCorruptionForm.cs</DependentUpon>
@@ -64,6 +64,18 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="InstallControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="InstallControl.Designer.cs">
+      <DependentUpon>InstallControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MalwareControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MalwareControl.Designer.cs">
+      <DependentUpon>MalwareControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SFC_DISM.cs" />
@@ -72,6 +84,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InstallControl.resx">
+      <DependentUpon>InstallControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MalwareControl.resx">
+      <DependentUpon>MalwareControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

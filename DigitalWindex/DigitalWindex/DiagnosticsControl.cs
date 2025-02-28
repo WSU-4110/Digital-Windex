@@ -12,8 +12,13 @@ namespace DesktopApp
 
         private void DiagnosticsControl_Load(object sender, EventArgs e)
         {
-            // Add initialization code for DiagnosticsControl here.
-            this.Dock = DockStyle.Fill;  // Ensure it fills the panel.
+            // Optional: Add any initialization logic here
+        }
+
+        private void BtnRunDiagnostics_Click(object sender, EventArgs e)
+        {
+            // Action when "Run Diagnostics" button is clicked
+            MessageBox.Show("Diagnostics process started...", "System Diagnostics", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

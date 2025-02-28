@@ -53,6 +53,14 @@ namespace DesktopApp
                 {
                     sideButtons[i].Click += DiagnosticsButton_Click;
                 }
+                else if (buttonNames[i] == "Malware")
+                {
+                    sideButtons[i].Click += MalwareButton_Click;
+                }
+                else if (buttonNames[i] == "Install")
+                {
+                    sideButtons[i].Click += InstallButton_Click;
+                }
                 else if (buttonNames[i] == "Clean Corruption")
                 {
                     sideButtons[i].Click += CleanCorruptionButton_Click;
@@ -89,6 +97,26 @@ namespace DesktopApp
             diagnosticsControl.Dock = DockStyle.Fill;
             mainPanel.Controls.Add(diagnosticsControl);
         }
+        private void InstallButton_Click(object sender, EventArgs e)
+        {
+            mainPanel.Controls.Clear(); // Remove existing content
+
+            // Load the Install page inside mainPanel
+            InstallControl installControl = new InstallControl();
+            installControl.Dock = DockStyle.Fill;
+            mainPanel.Controls.Add(installControl);
+        }
+
+        private void MalwareButton_Click(object sender, EventArgs e)
+        {
+            mainPanel.Controls.Clear(); // Remove existing content
+
+            // Load the Malware page inside mainPanel
+            MalwareControl malwareControl = new MalwareControl();
+            malwareControl.Dock = DockStyle.Fill;
+            mainPanel.Controls.Add(malwareControl);
+        }
+
 
         private void CleanCorruptionButton_Click(object sender, EventArgs e)
         {

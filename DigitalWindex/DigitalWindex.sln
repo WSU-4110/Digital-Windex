@@ -8,6 +8,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Backend", "Backend", "{9934C4D8-B584-408C-BCA7-204BC851F823}"
 	ProjectSection(SolutionItems) = preProject
 		SFC_DISM.cs = SFC_DISM.cs
+		DigitalWindex\TempFilesControl.cs = DigitalWindex\TempFilesControl.cs
+		DigitalWindex\WindowsRecoveryLauncher.cs = DigitalWindex\WindowsRecoveryLauncher.cs
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Frontend", "Frontend", "{CFACD336-87FB-4682-802F-04298007E8CB}"

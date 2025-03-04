@@ -27,7 +27,7 @@ namespace DesktopApp
             string[] buttonNames =
             {
                 "Home", "Diagnostics", "Malware",
-                "Install", "Clean Corruption", "Updates", "Designations"
+                "Install", "Clean Corruption", "Updates", "Temporary Files"
             };
 
             sideButtons = new Button[buttonNames.Length];
@@ -65,10 +65,26 @@ namespace DesktopApp
                 {
                     sideButtons[i].Click += CleanCorruptionButton_Click;
                 }
+                else if (buttonNames[i] == "Temporary Files")
+                {
+                    sideButtons[i].Click += TemporaryFilesButton_Click;
+                }
 
                 this.sidePanel.Controls.Add(sideButtons[i]);
             }
         }
+
+        private void TemporaryFilesButton_Click(object sender, EventArgs e)
+        {
+            // Clear existing controls in mainPanel
+            mainPanel.Controls.Clear();
+
+            // Create and load the Temporary Files page
+            TempFilesControl tempFilesControl = new TempFilesControl();
+            tempFilesControl.Dock = DockStyle.Fill;
+            mainPanel.Controls.Add(tempFilesControl);
+        }
+
 
         private void HomeButton_Click(object sender, EventArgs e)
         {

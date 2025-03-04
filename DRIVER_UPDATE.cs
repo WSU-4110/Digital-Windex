@@ -6,9 +6,9 @@ using System.Windows.Forms;
 
 namespace DigitalWindex.Backend
 {
-    public class UPDATE_DRIVERS
+    public class DRIVER_UPDATE
     {
-        public static async Task RundDriverUpdate()
+        public static async Task RunDriverUpdate()
         {
             DialogResult dialogResult = MessageBox.Show(
                 "This will redirect you to the Device Manager. Do you want to continue?",
@@ -23,7 +23,7 @@ namespace DigitalWindex.Backend
                     string driverUpdatePath = Path.Combine(Environment.SystemDirectory, "powershell.exe");
                     int driverUpdateExitCode = await RunCommandDirectly(driverUpdatePath, "devmgmt.msc");
 
-                    MessageBox.Show("redirection completed with exit code: " + sysUpdateExitCode,
+                    MessageBox.Show("redirection completed with exit code: " + driverUpdateExitCode,
                                     "Redirection Completed",
                                     MessageBoxButtons.OK,
                                     MessageBoxIcon.Information);

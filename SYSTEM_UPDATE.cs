@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace DigitalWindex.Backend
 {
-    public class UPDATE_SYSTEM
+    public class SYSTEM_UPDATE
     {
         public static async Task RunSystemUpdate()
         {

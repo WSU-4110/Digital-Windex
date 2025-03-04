@@ -47,7 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CleanCorruptionForm.cs">
-      <SubType>Form</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="CleanCorruptionForm.Designer.cs">
       <DependentUpon>CleanCorruptionForm.cs</DependentUpon>
@@ -64,14 +64,39 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="InstallControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="InstallControl.Designer.cs">
+      <DependentUpon>InstallControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MalwareControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MalwareControl.Designer.cs">
+      <DependentUpon>MalwareControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SFC_DISM.cs" />
+    <Compile Include="TempFilesControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TempFilesControl.Designer.cs">
+      <DependentUpon>TempFilesControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WindowsRecoveryLauncher.cs" />
     <EmbeddedResource Include="DiagnosticsControl.resx">
       <DependentUpon>DiagnosticsControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InstallControl.resx">
+      <DependentUpon>InstallControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MalwareControl.resx">
+      <DependentUpon>MalwareControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -82,6 +107,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="TempFilesControl.resx">
+      <DependentUpon>TempFilesControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="McAfeeStingerPortable\App\AppInfo\appinfo.ini" />
+    <None Include="McAfeeStingerPortable\App\AppInfo\Installer.ini" />
+    <None Include="McAfeeStingerPortable\App\AppInfo\Launcher\Custom.nsh" />
+    <None Include="McAfeeStingerPortable\App\AppInfo\Launcher\McAfeeStingerPortable.ini" />
+    <None Include="McAfeeStingerPortable\App\AppInfo\pac_installer_log.ini" />
+    <None Include="McAfeeStingerPortable\Data\PortableApps.comInstaller\license.ini" />
+    <None Include="McAfeeStingerPortable\Data\settings\McAfeeStingerPortableSettings.ini" />
+    <None Include="McAfeeStingerPortable\Other\Source\AppNamePortable.ini" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -94,6 +130,28 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="McAfeeStingerPortable\App\AppInfo\appicon.ico" />
+    <Content Include="McAfeeStingerPortable\App\AppInfo\appicon_128.png" />
+    <Content Include="McAfeeStingerPortable\App\AppInfo\appicon_16.png" />
+    <Content Include="McAfeeStingerPortable\App\AppInfo\appicon_32.png" />
+    <Content Include="McAfeeStingerPortable\App\AppInfo\appicon_75.png" />
+    <Content Include="McAfeeStingerPortable\App\AppInfo\EULA.txt" />
+    <Content Include="McAfeeStingerPortable\App\Readme.txt" />
+    <Content Include="McAfeeStingerPortable\App\Stinger\stinger32.exe" />
+    <Content Include="McAfeeStingerPortable\help.html" />
+    <Content Include="McAfeeStingerPortable\McAfeeStingerPortable.exe" />
+    <Content Include="McAfeeStingerPortable\Other\Help\Images\Donation_Button.png" />
+    <Content Include="McAfeeStingerPortable\Other\Help\Images\Favicon.ico" />
+    <Content Include="McAfeeStingerPortable\Other\Help\Images\Help_Background_Footer.png" />
+    <Content Include="McAfeeStingerPortable\Other\Help\Images\Help_Background_Header.png" />
+    <Content Include="McAfeeStingerPortable\Other\Help\Images\Help_Logo_Top.png" />
+    <Content Include="McAfeeStingerPortable\Other\Source\LauncherLicense.txt" />
+    <Content Include="McAfeeStingerPortable\Other\Source\Readme.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="McAfeeStingerPortable\App\Stinger\JAYS-DESKTOP\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -10,15 +10,12 @@ namespace DesktopApp
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Label lblTitle;
-        private System.Windows.Forms.Label lblDescription;
+        private TableLayoutPanel tableLayoutPanel1;
+        private Label lblTitle;
+        private Label lblDescription;
         private Button BtnRunSystemUpdate;
 
-        /// <summary> 
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+     
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -36,8 +33,7 @@ namespace DesktopApp
         /// </summary>
         private void InitializeComponent()
         {
-
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CleanCorruptionForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InstallControl));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.lblTitle = new System.Windows.Forms.Label();
             this.lblDescription = new System.Windows.Forms.Label();
@@ -76,8 +72,9 @@ namespace DesktopApp
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(573, 46);
             this.lblTitle.TabIndex = 0;
-            this.lblTitle.Text = "Clean Corruption";
+            this.lblTitle.Text = "Install";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblTitle.Click += new System.EventHandler(this.lblTitle_Click);
             // 
             // lblDescription
             // 
@@ -93,20 +90,20 @@ namespace DesktopApp
             this.lblDescription.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblDescription.Click += new System.EventHandler(this.lblDescription_Click);
             // 
-            // btnRunCleanup
+            // btnStartInstall
             // 
             this.BtnRunSystemUpdate.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BtnRunSystemUpdate.AutoSize = true;
             this.BtnRunSystemUpdate.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
-            this.BtnRunSystemUpdate.Location = new System.Drawing.Point(404, 543);
+            this.BtnRunSystemUpdate.Location = new System.Drawing.Point(415, 543);
             this.BtnRunSystemUpdate.Name = "BtnRunSystemUpdate";
-            this.BtnRunSystemUpdate.Size = new System.Drawing.Size(196, 34);
+            this.BtnRunSystemUpdate.Size = new System.Drawing.Size(175, 34);
             this.BtnRunSystemUpdate.TabIndex = 2;
-            this.BtnRunSystemUpdate.Text = "Run System Update";
+            this.BtnRunSystemUpdate.Text = "Start Installation";
             this.BtnRunSystemUpdate.UseVisualStyleBackColor = true;
             this.BtnRunSystemUpdate.Click += new System.EventHandler(this.BtnRunSystemUpdate_Click);
             // 
-            // CleanCorruptionForm
+            // InstallControl
             // 
             this.BackColor = System.Drawing.Color.Purple;
             this.Controls.Add(this.tableLayoutPanel1);

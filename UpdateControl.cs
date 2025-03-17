@@ -20,7 +20,7 @@ namespace DesktopApp
         private void BtnRunSystemUpdate_Click(object sender, EventArgs e)
         {
             // Call the system update function
-            _ = SYSTEM_UPDATE.RunSystemUpdate();
+            SYSTEM_UPDATE.RunSystemUpdate();
         }
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
@@ -29,6 +29,11 @@ namespace DesktopApp
         }
 
         private void lblDescription_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblTitle_Click(object sender, EventArgs e)
         {
 
         }

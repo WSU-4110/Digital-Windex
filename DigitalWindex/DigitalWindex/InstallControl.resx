@@ -117,4 +117,38 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="lblDescription.Text" xml:space="preserve">
+    <value>You are currently in the Recovery section of Digital Windex!
+
+From here, you can open Windows' built-in Recovery Settings, where you have options to reset or repair your PC if it’s running poorly or experiencing serious issues. By choosing between keeping personal files or removing everything, you can address system corruption, restore performance, and essentially ‘start fresh’ —all guided by Windows’ straightforward wizard. This step is helpful if standard fixes aren’t enough and you need a more robust, official way to return your system to a stable state.
+
+WARNING: All of your user data and installed programs will be deleted if you choose to reset and remove everything! If you have already completed diagnostics, updates, and cleaned corruption, this is the best final solution to operating system issues.
+
+------------------------------------------
+Reset This PC in Windows 10 and Windows 11
+------------------------------------------
+
+When you go to Recovery Settings (via “Start Installation”), you’ll see an option called Reset this PC. This feature lets you reinstall Windows to fix serious problems or refresh your system.
+
+Windows 10 typically shows a “Get started” button under Reset this PC, while Windows 11 has a “Reset PC” button. Both lead to the same core options:
+
+• Keep my files: Windows reinstalls itself but attempts to preserve your personal files. Apps and settings are usually removed.
+• Remove everything: Windows does a more thorough reset, removing your personal files, installed apps, and settings.
+
+If neither option resolves your issues, you may also see Advanced startup for more tools like booting from USB or changing UEFI settings.
+
+Why Use Reset This PC?
+----------------------
+• Major performance issues or corruption that normal fixes haven’t resolved.
+• You want a “just installed” state without manually reinstalling from external media.
+
+Before You Reset
+---------------
+• Back up important files (especially if removing everything).
+• Plug in your device to power—resets can take a while.
+
+What Happens Next?
+------------------
+Windows will restart your PC and guide you through the reset wizard. Once complete, you’ll either keep your personal files (if you chose Keep my files) or have a fully clean slate (if you chose Remove everything).</value>
+  </data>
 </root>

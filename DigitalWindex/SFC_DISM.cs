@@ -21,11 +21,7 @@ namespace DigitalWindex.Backend
                 try
                 {
                     string dismPath = Path.Combine(Environment.SystemDirectory, "DISM.exe");
-<<<<<<< HEAD
-                    int dismExitCode = await RunCommandDirectly(dismPath, "/online /cleanup-image /scanhealth");
-=======
                     int dismExitCode = await RunCommandDirectly(dismPath, "/online /cleanup-image /restorehealth");
->>>>>>> 53b18beb34e8d117601a4f04d3a905a7bd5ddc5e
 
                     MessageBox.Show("DISM scan completed with exit code: " + dismExitCode,
                                     "Scan Completed",
@@ -51,15 +47,9 @@ namespace DigitalWindex.Backend
                     FileName = fullFileName,
                     Arguments = arguments,
                     UseShellExecute = true,
-<<<<<<< HEAD
-                    Verb = "runas",
-                    WorkingDirectory = Environment.SystemDirectory,
-                    CreateNoWindow = false
-=======
                     Verb = "runas", 
                     WorkingDirectory = Environment.SystemDirectory,
                     CreateNoWindow = false  
->>>>>>> 53b18beb34e8d117601a4f04d3a905a7bd5ddc5e
                 };
 
                 int exitCode = -1;

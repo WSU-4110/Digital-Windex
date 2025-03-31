@@ -1,6 +1,6 @@
-﻿/*
-using System;
+﻿using System;
 using System.Windows.Forms;
+using SystemDiagnostics;
 
 namespace DesktopApp
 {
@@ -13,50 +13,26 @@ namespace DesktopApp
 
         private void DiagnosticsControl_Load(object sender, EventArgs e)
         {
-            // Optional: Add any initialization logic here
-        }
-
-        private void BtnRunDiagnostics_Click(object sender, EventArgs e)
-        {
-            // Action when "Run Diagnostics" button is clicked
-            MessageBox.Show("Diagnostics process started...", "System Diagnostics", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
-    }
-}
-*/
-
-using System;
-using System.Windows.Forms;
-using SystemDiagnostics; // Import the namespace where the DiagnosticRunner class is defined
-
-namespace DesktopApp
-{
-    public partial class DiagnosticsControl : UserControl
-    {
-        public DiagnosticsControl()
-        {
-            InitializeComponent();
-        }
-
-        private void DiagnosticsControl_Load(object sender, EventArgs e)
-        {
-            // Optional: Add any initialization logic here
+            // Optional: Initialization logic upon loading the control
         }
 
         private void BtnRunDiagnostics_Click(object sender, EventArgs e)
         {
             try
             {
-                // Run diagnostics when button is clicked
-                DiagnosticRunner.RunAllDiagnostics();
+                string result = DiagnosticRunner.RunAllDiagnostics();
 
-                MessageBox.Show("Diagnostics process started. Check console output or logs for details.",
-                    "System Diagnostics", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(result,
+                    "System Diagnostics Output",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error running diagnostics: " + ex.Message,
-                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    "Execution Error",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
             }
         }
     }

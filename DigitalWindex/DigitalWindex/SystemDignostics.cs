@@ -1,150 +1,56 @@
-﻿/*
-using System;
+﻿using System;
 using System.Diagnostics;
 using System.IO;
 
 namespace SystemDiagnostics
 {
-    class Program
+    public static class DiagnosticRunner
     {
-        static void ExecuteCommand(string command)
+        public static string RunAllDiagnostics()
         {
-            try
-            {
-                ProcessStartInfo psi = new ProcessStartInfo
-                {
-                    FileName = "cmd.exe",
-                    Arguments = "/c " + command,
-                    RedirectStandardOutput = true,
-                    RedirectStandardError = true,
-                    UseShellExecute = false,
-                    CreateNoWindow = true
-                };
+            string script = @"
+$drives = Get-WmiObject -Class Win32_DiskDrive | Select-Object Model, Status
+$cpu = Get-WmiObject -Class Win32_Processor | Select-Object Name, Status
 
-                using (Process process = new Process { StartInfo = psi })
-                {
-                    process.Start();
-                    string output = process.StandardOutput.ReadToEnd();
-                    string error = process.StandardError.ReadToEnd();
-
-                    process.WaitForExit();
-
-                    if (!string.IsNullOrEmpty(output))
-                        Console.WriteLine("Output: " + output);
-                    if (!string.IsNullOrEmpty(error))
-                        Console.WriteLine("Error: " + error);
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Command Execution Error: " + ex.Message);
-                File.WriteAllText("error_log.txt", "Command Execution Error: " + ex.ToString());
-            }
-        }
-
-        static void CheckCPUStatus()
-        {
-            Console.WriteLine("Checking CPU Status...");
-            ExecuteCommand("powershell -Command \"Get-CimInstance Win32_Processor | Select-Object Name, LoadPercentage\"");
-        }
-
-        static void RunMemoryDiagnostics()
-        {
-            Console.WriteLine("Scheduling Windows Memory Diagnostics...");
-            ExecuteCommand("bcdedit /set {current} badmemoryaccess yes");
-        }
-
-        static void RestartComputer()
-        {
-            Console.WriteLine("Press any key to restart the system in 10 seconds...");
-            Console.ReadKey();
-            ExecuteCommand("shutdown /r /t 10");
-        }
-
-        static void Main(string[] args)
-        {
-            try
-            {
-                Console.WriteLine("Starting System Diagnostics...");
-
-                CheckCPUStatus();
-
-                RunMemoryDiagnostics();
-
-                RestartComputer();
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Fatal Error: " + ex.Message);
-                File.WriteAllText("error_log.txt", "Fatal Error: " + ex.ToString());
-            }
-        }
-    }
+Write-Output '=== Disk Drive SMART Status ==='
+foreach ($d in $drives) {
+    Write-Output ('Model: ' + $d.Model)
+    Write-Output ('Status: ' + $d.Status)
+    Write-Output ''
 }
-*/
 
-using System;
-using System.Diagnostics;
-using System.IO;
+Write-Output '=== CPU Information ==='
+foreach ($c in $cpu) {
+    Write-Output ('Name: ' + $c.Name)
+    Write-Output ('Status: ' + $c.Status)
+}
+";
 
-namespace SystemDiagnostics
-{
-    public class DiagnosticRunner
-    {
-        private static void ExecuteCommand(string command)
-        {
+            string tempScriptPath = Path.Combine(Path.GetTempPath(), "smartcheck.ps1");
+            File.WriteAllText(tempScriptPath, script);
+
+            ProcessStartInfo psi = new ProcessStartInfo
+            {
+                FileName = "powershell.exe",
+                Arguments = $"-ExecutionPolicy Bypass -NoProfile -File \"{tempScriptPath}\"",
+                RedirectStandardOutput = true,
+                UseShellExecute = false,
+                CreateNoWindow = true
+            };
+
             try
             {
-                ProcessStartInfo psi = new ProcessStartInfo
+                using (Process process = Process.Start(psi))
                 {
-                    FileName = "cmd.exe",
-                    Arguments = "/c " + command,
-                    RedirectStandardOutput = true,
-                    RedirectStandardError = true,
-                    UseShellExecute = false,
-                    CreateNoWindow = true
-                };
-
-                using (Process process = new Process { StartInfo = psi })
-                {
-                    process.Start();
                     string output = process.StandardOutput.ReadToEnd();
-                    string error = process.StandardError.ReadToEnd();
                     process.WaitForExit();
-
-                    if (!string.IsNullOrEmpty(output))
-                        Console.WriteLine("Output: " + output);
-                    if (!string.IsNullOrEmpty(error))
-                        Console.WriteLine("Error: " + error);
+                    return output;
                 }
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Command Execution Error: " + ex.Message);
-                File.WriteAllText("error_log.txt", "Command Execution Error: " + ex.ToString());
+                return $"An error occurred while executing diagnostics: {ex.Message}";
             }
-        }
-
-        public static void CheckCPUStatus()
-        {
-            ExecuteCommand("powershell -Command \"Get-CimInstance Win32_Processor | Select-Object Name, LoadPercentage\"");
-        }
-
-        public static void RunMemoryDiagnostics()
-        {
-            ExecuteCommand("bcdedit /set {current} badmemoryaccess yes");
-        }
-
-        public static void RestartComputer()
-        {
-            ExecuteCommand("shutdown /r /t 10");
-        }
-
-        public static void RunAllDiagnostics()
-        {
-            CheckCPUStatus();
-            RunMemoryDiagnostics();
-            RestartComputer();
         }
     }
 }

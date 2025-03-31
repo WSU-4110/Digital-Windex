@@ -25,75 +25,90 @@ namespace DesktopApp
 
         private void InitializeComponent()
         {
-            // Create and configure TableLayoutPanel
-            this.tableLayoutPanel1 = new TableLayoutPanel();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InstallControl));
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.lblTitle = new System.Windows.Forms.Label();
+            this.lblDescription = new System.Windows.Forms.Label();
+            this.btnStartInstall = new System.Windows.Forms.Button();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // tableLayoutPanel1
+            // 
             this.tableLayoutPanel1.ColumnCount = 3;
-            // Left and right columns for spacing (20% each) and center column for content (60%)
-            this.tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 60F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
-
-            // Use 3 rows: title, description, and button
-            this.tableLayoutPanel1.RowCount = 3;
-            // Title row auto-sizes, description row fills remaining space, and button row auto-sizes
-            this.tableLayoutPanel1.RowStyles.Add(new RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            this.tableLayoutPanel1.RowStyles.Add(new RowStyle());
-
-            this.tableLayoutPanel1.Dock = DockStyle.Fill;
-            this.tableLayoutPanel1.Padding = new Padding(20);
-
-            // Title Label
-            this.lblTitle = new Label();
-            this.lblTitle.AutoSize = true;
-            this.lblTitle.Dock = DockStyle.Fill;
-            this.lblTitle.Font = new Font("Arial", 24F, FontStyle.Bold);
-            this.lblTitle.ForeColor = Color.White;
-            this.lblTitle.Text = "Install";
-            this.lblTitle.TextAlign = ContentAlignment.MiddleCenter;
-            this.lblTitle.Click += new EventHandler(this.lblTitle_Click_1);
-
-            // Description Label
-            this.lblDescription = new Label();
-            this.lblDescription.Dock = DockStyle.Fill;
-            // Turn off AutoSize so it fills the cell
-            this.lblDescription.AutoSize = false;
-            this.lblDescription.Font = new Font("Segoe UI", 12F);
-            this.lblDescription.ForeColor = Color.White;
-            this.lblDescription.Text = "Welcome to the installation section of Digital Windex! \n\n" +
-                "This section is useful for two main reasons:" +
-                "\n- If you want to start fresh on your PC by wiping all of your current user data and programs" +
-                "\n- If the corruption on your PC is too severe to be fixed by DISM (Clean Corruption)" +
-                "\n\nKeep my files reset: Use if you want to fix severe OS corruption without losing your data" +
-                "\nRemove everything reset: Use if you want to start fresh or if you already tried a keep my files reset " +
-                "to fix OS corruption to no avail." +
-                "\n\nThese are the only two options on Windows 10. However, if you are on Windows 11, you will see more " +
-                "options for fixing corruption: \n- Fix problems without resetting your PC \n- Fix problems using Windows Update\n\n" +
-                "You can use these extra two options for fixing corruption on your PC." ;
-            this.lblDescription.TextAlign = ContentAlignment.MiddleCenter;
-            this.lblDescription.Margin = new Padding(10);
-            this.lblDescription.Click += new EventHandler(this.lblDescription_Click_1);
-
-            // Start Install Button
-            this.btnStartInstall = new Button();
-            this.btnStartInstall.Anchor = AnchorStyles.None;
-            this.btnStartInstall.AutoSize = true;
-            this.btnStartInstall.Font = new Font("Arial", 12F, FontStyle.Bold);
-            this.btnStartInstall.Text = "Start Installation";
-            this.btnStartInstall.UseVisualStyleBackColor = true;
-            this.btnStartInstall.Click += new EventHandler(this.BtnStartInstall_Click);
-
-            // Add controls to the TableLayoutPanel
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel1.Controls.Add(this.lblTitle, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.lblDescription, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.btnStartInstall, 1, 2);
-
-            // Configure the main control
-            this.BackColor = Color.Purple;
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.Padding = new System.Windows.Forms.Padding(20);
+            this.tableLayoutPanel1.RowCount = 3;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1005, 600);
+            this.tableLayoutPanel1.TabIndex = 0;
+            this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint_1);
+            // 
+            // lblTitle
+            // 
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblTitle.Font = new System.Drawing.Font("Arial", 24F, System.Drawing.FontStyle.Bold);
+            this.lblTitle.ForeColor = System.Drawing.Color.White;
+            this.lblTitle.Location = new System.Drawing.Point(216, 20);
+            this.lblTitle.Margin = new System.Windows.Forms.Padding(0, 20, 0, 20);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(573, 46);
+            this.lblTitle.TabIndex = 0;
+            this.lblTitle.Text = "Install";
+            this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblTitle.Click += new System.EventHandler(this.lblTitle_Click_1);
+            // 
+            // lblDescription
+            // 
+            this.lblDescription.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblDescription.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.lblDescription.ForeColor = System.Drawing.Color.White;
+            this.lblDescription.BackColor = Color.FromArgb(60, 0, 0, 0); // semi-transparent background
+            this.lblDescription.Padding = new System.Windows.Forms.Padding(20);
+            this.lblDescription.Margin = new System.Windows.Forms.Padding(0, 0, 0, 20);
+            this.lblDescription.Name = "lblDescription";
+            this.lblDescription.Text = resources.GetString("lblDescription.Text");
+            this.lblDescription.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.lblDescription.Click += new System.EventHandler(this.lblDescription_Click_1);
+            // 
+            // btnStartInstall
+            // 
+            this.btnStartInstall.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnStartInstall.AutoSize = true;
+            this.btnStartInstall.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnStartInstall.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.btnStartInstall.Location = new System.Drawing.Point(415, 534);
+            this.btnStartInstall.Margin = new System.Windows.Forms.Padding(0, 10, 0, 40);
+            this.btnStartInstall.Name = "btnStartInstall";
+            this.btnStartInstall.Padding = new System.Windows.Forms.Padding(20, 10, 20, 10);
+            this.btnStartInstall.Size = new System.Drawing.Size(175, 44);
+            this.btnStartInstall.TabIndex = 2;
+            this.btnStartInstall.Text = "Start Installation";
+            this.btnStartInstall.UseVisualStyleBackColor = true;
+            this.btnStartInstall.Click += new System.EventHandler(this.BtnStartInstall_Click);
+            // 
+            // InstallControl
+            // 
+            this.BackColor = System.Drawing.Color.Purple;
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "InstallControl";
-            this.Size = new Size(1005, 600);
-            this.Load += new EventHandler(this.InstallControl_Load);
+            this.Size = new System.Drawing.Size(1005, 600);
+            this.Load += new System.EventHandler(this.InstallControl_Load);
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
+            this.ResumeLayout(false);
+
         }
 
         #endregion

@@ -1,9 +1,9 @@
-﻿################################################################################
-# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
-################################################################################
-
-/.vs
-/DigitalWindexUI/.vs/DigitalWindexUI
-/.exe
-/.pdb
-/.cache
+﻿.vs/
+*.vsdx
+*.user
+*.suo
+*.tmp
+*.log
+*.db
+Thumbs.db
+desktop.ini

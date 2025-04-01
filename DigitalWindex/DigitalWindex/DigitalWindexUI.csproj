@@ -86,6 +86,12 @@
     <Compile Include="TempFilesControl.Designer.cs">
       <DependentUpon>TempFilesControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="UpdatesControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UpdatesControl.Designer.cs">
+      <DependentUpon>UpdatesControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="WindowsRecoveryLauncher.cs" />
     <EmbeddedResource Include="DiagnosticsControl.resx">
       <DependentUpon>DiagnosticsControl.cs</DependentUpon>
@@ -110,6 +116,9 @@
     </Compile>
     <EmbeddedResource Include="TempFilesControl.resx">
       <DependentUpon>TempFilesControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdatesControl.resx">
+      <DependentUpon>UpdatesControl.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="McAfeeStingerPortable\App\AppInfo\appinfo.ini" />
     <None Include="McAfeeStingerPortable\App\AppInfo\Installer.ini" />

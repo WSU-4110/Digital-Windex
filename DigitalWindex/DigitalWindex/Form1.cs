@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DigitalWindexUI;
+using System;
 using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
@@ -68,6 +69,10 @@ namespace DesktopApp
                 else if (buttonNames[i] == "Temporary Files")
                 {
                     sideButtons[i].Click += TemporaryFilesButton_Click;
+                }
+                else if (buttonNames[i] == "Updates")
+                {
+                    sideButtons[i].Click += UpdatesButton_Click;
                 }
 
                 this.sidePanel.Controls.Add(sideButtons[i]);
@@ -144,6 +149,17 @@ namespace DesktopApp
             mainPanel.Controls.Add(cleanControl);
         }
 
+        private void UpdatesButton_Click(object sender, EventArgs e)
+        {
+            mainPanel.Controls.Clear(); // Clear current content
+
+            UpdatesControl updatesControl = new UpdatesControl();
+            updatesControl.Dock = DockStyle.Fill;
+
+            mainPanel.Controls.Add(updatesControl);
+        }
+
+
         private void Form1_Load(object sender, EventArgs e)
         {
             this.Text = "Digital Windex";
@@ -161,5 +177,9 @@ namespace DesktopApp
             MessageBox.Show("Description clicked!");
         }
 
+        private void sidePanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

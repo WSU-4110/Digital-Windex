@@ -27,14 +27,12 @@ namespace DesktopApp
         {
             this.sidePanel = new System.Windows.Forms.Panel();
             this.mainPanel = new System.Windows.Forms.Panel();
+            this.lblDescription = new System.Windows.Forms.Label();
             this.lblTitle = new System.Windows.Forms.Label();
             this.lblWelcome = new System.Windows.Forms.Label();
-            this.lblDescription = new System.Windows.Forms.Label();
             this.mainPanel.SuspendLayout();
             this.SuspendLayout();
-            //
-           
-
+            // 
             // sidePanel
             // 
             this.sidePanel.BackColor = System.Drawing.Color.MediumPurple;
@@ -44,6 +42,7 @@ namespace DesktopApp
             this.sidePanel.Name = "sidePanel";
             this.sidePanel.Size = new System.Drawing.Size(269, 730);
             this.sidePanel.TabIndex = 0;
+            this.sidePanel.Paint += new System.Windows.Forms.PaintEventHandler(this.sidePanel_Paint);
             // 
             // mainPanel
             // 
@@ -59,8 +58,20 @@ namespace DesktopApp
             this.mainPanel.TabIndex = 1;
             this.mainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.mainPanel_Paint);
             // 
-
-
+            // lblDescription
+            // 
+            this.lblDescription.AutoSize = true;
+            this.lblDescription.Font = new System.Drawing.Font("Arial", 12F);
+            this.lblDescription.ForeColor = System.Drawing.Color.White;
+            this.lblDescription.Location = new System.Drawing.Point(321, 193);
+            this.lblDescription.Name = "lblDescription";
+            this.lblDescription.Size = new System.Drawing.Size(1521, 23);
+            this.lblDescription.TabIndex = 2;
+            this.lblDescription.Text = "Digital Windex is an all-in-one Windows maintenance tool that automates system up" +
+    "dates, diagnostics, malware scanning, and file cleanup to keep your PC running s" +
+    "moothly.";
+            this.lblDescription.Click += new System.EventHandler(this.lblDescription_Click);
+            // 
             // lblTitle
             // 
             this.lblTitle.AutoSize = true;
@@ -81,20 +92,6 @@ namespace DesktopApp
             this.lblWelcome.Name = "lblWelcome";
             this.lblWelcome.Size = new System.Drawing.Size(0, 32);
             this.lblWelcome.TabIndex = 1;
-            // 
-            // lblDescription
-            // 
-            this.lblDescription.AutoSize = true;
-            this.lblDescription.Font = new System.Drawing.Font("Arial", 12F);
-            this.lblDescription.ForeColor = System.Drawing.Color.White;
-            this.lblDescription.Location = new System.Drawing.Point(321, 193);
-            this.lblDescription.Name = "lblDescription";
-            this.lblDescription.Size = new System.Drawing.Size(1521, 23);
-            this.lblDescription.TabIndex = 2;
-            this.lblDescription.Text = "Digital Windex is an all-in-one Windows maintenance tool that automates system up" +
-    "dates, diagnostics, malware scanning, and file cleanup to keep your PC running s" +
-    "moothly.";
-            this.lblDescription.Click += new System.EventHandler(this.lblDescription_Click);
             // 
             // Form1
             // 

@@ -33,5 +33,10 @@ namespace DigitalWindexUI
             // Logic for installing updates
             MessageBox.Show("Installing updates...", "Updates");
         }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

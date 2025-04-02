@@ -70,6 +70,7 @@
     <Compile Include="InstallControl.Designer.cs">
       <DependentUpon>InstallControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="IUpdateObserver.cs" />
     <Compile Include="MalwareControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -92,6 +93,7 @@
     <Compile Include="UpdatesControl.Designer.cs">
       <DependentUpon>UpdatesControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="UpdateService.cs" />
     <Compile Include="WindowsRecoveryLauncher.cs" />
     <EmbeddedResource Include="DiagnosticsControl.resx">
       <DependentUpon>DiagnosticsControl.cs</DependentUpon>

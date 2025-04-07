@@ -1,6 +1,6 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Windows.Forms;
-using DigitalWindex.Backend; // Make sure this matches your actual namespace
 
 namespace DesktopApp
 {
@@ -9,57 +9,37 @@ namespace DesktopApp
         public InstallControl()
         {
             InitializeComponent();
+            // Layout is handled by TableLayoutPanel, no manual centering needed
         }
 
         private void InstallControl_Load(object sender, EventArgs e)
         {
-            // Optional: any initialization logic here
+            // Optional: initialization logic if needed
         }
 
         private void BtnStartInstall_Click(object sender, EventArgs e)
         {
-            // When clicked, open the "System → Recovery" Settings page in Windows 11
-            WindowsRecoveryLauncher.OpenRecoverySettings();
-        }
+            DialogResult result = MessageBox.Show(
+                "This will open the Recovery Settings to reset or repair your PC. Continue?",
+                "Confirm Recovery Launch",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Warning
+            );
 
-        private void lblTitle_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tblOuter_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void flowPanel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void lblDescription_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void lblDescription_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblTitle_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tableLayoutPanel1_Paint_1(object sender, PaintEventArgs e)
-        {
-
+            if (result == DialogResult.Yes)
+            {
+                try
+                {
+                    Process.Start("ms-settings:recovery");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Failed to open Recovery Settings:\n" + ex.Message,
+                                    "Error",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Error);
+                }
+            }
         }
     }
 }

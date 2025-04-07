@@ -1,26 +1,37 @@
-﻿using DigitalWindexUI;
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
+using DigitalWindexUI;
 
 namespace DesktopApp
 {
     public partial class Form1 : Form
     {
+        Label dateTimeLabel;
+        Panel separator;
+
         public Form1()
         {
             InitializeComponent();
+
             if (!IsInDesignMode())
             {
                 CreateSidebarButtons();
                 LoadHomePage();
+                this.Resize += Form1_Resize;
             }
         }
 
         private bool IsInDesignMode()
         {
             return LicenseManager.UsageMode == LicenseUsageMode.Designtime;
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            this.Text = "Digital Windex";
+            lblWelcome.Text = "Hello " + Environment.UserName + "!";
         }
 
         private void CreateSidebarButtons()
@@ -40,146 +51,163 @@ namespace DesktopApp
                     Text = buttonNames[i],
                     Size = new Size(180, 40),
                     Location = new Point(10, 20 + i * 50),
-                    Font = new Font("Arial", 12F, FontStyle.Bold),
-                    BackColor = Color.MediumPurple,
+                    Font = new Font("Segoe UI", 11F, FontStyle.Bold),
+                    BackColor = Color.FromArgb(103, 80, 164),
                     ForeColor = Color.White,
                     FlatStyle = FlatStyle.Flat
                 };
 
-                if (buttonNames[i] == "Home")
-                {
-                    sideButtons[i].Click += HomeButton_Click;
-                }
-                else if (buttonNames[i] == "Diagnostics")
-                {
-                    sideButtons[i].Click += DiagnosticsButton_Click;
-                }
-                else if (buttonNames[i] == "Malware")
-                {
-                    sideButtons[i].Click += MalwareButton_Click;
-                }
-                else if (buttonNames[i] == "Install")
-                {
-                    sideButtons[i].Click += InstallButton_Click;
-                }
-                else if (buttonNames[i] == "Clean Corruption")
-                {
-                    sideButtons[i].Click += CleanCorruptionButton_Click;
-                }
-                else if (buttonNames[i] == "Temporary Files")
-                {
-                    sideButtons[i].Click += TemporaryFilesButton_Click;
-                }
-                else if (buttonNames[i] == "Updates")
-                {
-                    sideButtons[i].Click += UpdatesButton_Click;
-                }
+                sideButtons[i].FlatAppearance.BorderSize = 0;
+                sideButtons[i].FlatAppearance.MouseOverBackColor = Color.FromArgb(130, 100, 200);
+                sideButtons[i].Cursor = Cursors.Hand;
 
-                this.sidePanel.Controls.Add(sideButtons[i]);
+                sideButtons[i].Click += SidebarButton_Click;
+                sidePanel.Controls.Add(sideButtons[i]);
             }
         }
 
-        private void TemporaryFilesButton_Click(object sender, EventArgs e)
+        private void SidebarButton_Click(object sender, EventArgs e)
         {
-            // Clear existing controls in mainPanel
-            mainPanel.Controls.Clear();
+            Button clickedButton = sender as Button;
+            if (clickedButton == null) return;
 
-            // Create and load the Temporary Files page
-            TempFilesControl tempFilesControl = new TempFilesControl();
-            tempFilesControl.Dock = DockStyle.Fill;
-            mainPanel.Controls.Add(tempFilesControl);
-        }
+            string section = clickedButton.Text;
 
-
-        private void HomeButton_Click(object sender, EventArgs e)
-        {
-            LoadHomePage(); // Restore the default Form1 layout when clicking Home
-            mainPanel.Controls.Add(lblTitle);
-            mainPanel.Controls.Add(lblWelcome);
-            mainPanel.Controls.Add(lblDescription);
+            if (section == "Home")
+            {
+                LoadHomePage();
+            }
+            else
+            {
+                LoadPage(section);
+            }
         }
 
         private void LoadHomePage()
         {
-            mainPanel.Controls.Clear(); // Clear existing content
+            mainPanel.Controls.Clear();
 
-            // Re-add Form1's original labels and content
+            // ===== TITLE =====
+            lblTitle.Text = "Digital Windex";
+            lblTitle.Font = new Font("Century Gothic", 36F, FontStyle.Bold);
+            lblTitle.ForeColor = Color.FromArgb(103, 80, 164);
+            lblTitle.AutoSize = true;
+            lblTitle.Location = new Point((mainPanel.ClientSize.Width - lblTitle.PreferredWidth) / 2, 40);
+            lblTitle.Visible = true;
+
+            // ===== WELCOME =====
+            lblWelcome.Text = $"Welcome, {Environment.UserName.ToLower()}!";
+            lblWelcome.Font = new Font("Segoe UI", 20F, FontStyle.Regular);
+            lblWelcome.ForeColor = Color.FromArgb(45, 45, 45);
+            lblWelcome.AutoSize = true;
+            lblWelcome.Location = new Point((mainPanel.ClientSize.Width - lblWelcome.PreferredWidth) / 2, 100);
+            lblWelcome.Visible = true;
+
+            // ===== DESCRIPTION =====
+            lblDescription.Text = "This dashboard allows you to maintain your PC in one click.\n" +
+                                  "Use the panel on the left to get started with diagnostics, updates, and cleanup tools.";
+            lblDescription.Font = new Font("Segoe UI", 11.5F, FontStyle.Italic);
+            lblDescription.ForeColor = Color.DimGray;
+            lblDescription.MaximumSize = new Size(mainPanel.ClientSize.Width - 100, 0);
+            lblDescription.AutoSize = true;
+            lblDescription.Location = new Point((mainPanel.ClientSize.Width - lblDescription.PreferredWidth) / 2, 165);
+            lblDescription.Visible = true;
+
+            // ===== SEPARATOR =====
+            separator = new Panel();
+            separator.Height = 2;
+            separator.Width = mainPanel.ClientSize.Width - 100;
+            separator.BackColor = Color.FromArgb(200, 200, 200);
+            separator.Location = new Point((mainPanel.ClientSize.Width - separator.Width) / 2, 245);
+
+            // ===== DATE & TIME =====
+            dateTimeLabel = new Label();
+            dateTimeLabel.Text = $"🗓 {DateTime.Now:dddd, MMMM d, yyyy - h:mm tt}";
+            dateTimeLabel.Font = new Font("Segoe UI", 10F, FontStyle.Regular);
+            dateTimeLabel.ForeColor = Color.Gray;
+            dateTimeLabel.AutoSize = true;
+            dateTimeLabel.Location = new Point((mainPanel.ClientSize.Width - dateTimeLabel.PreferredWidth) / 2, 260);
+
+            // ===== ADD TO PANEL =====
             mainPanel.Controls.Add(lblTitle);
             mainPanel.Controls.Add(lblWelcome);
             mainPanel.Controls.Add(lblDescription);
+            mainPanel.Controls.Add(separator);
+            mainPanel.Controls.Add(dateTimeLabel);
         }
-        private void DiagnosticsButton_Click(object sender, EventArgs e)
+
+        private void Form1_Resize(object sender, EventArgs e)
         {
-            // Clear existing controls in mainPanel
+            if (lblTitle.Visible)
+            {
+                lblTitle.Left = (mainPanel.ClientSize.Width - lblTitle.PreferredWidth) / 2;
+                lblWelcome.Left = (mainPanel.ClientSize.Width - lblWelcome.PreferredWidth) / 2;
+
+                lblDescription.MaximumSize = new Size(mainPanel.ClientSize.Width - 100, 0);
+                lblDescription.Left = (mainPanel.ClientSize.Width - lblDescription.PreferredWidth) / 2;
+
+                if (separator != null)
+                {
+                    separator.Width = mainPanel.ClientSize.Width - 100;
+                    separator.Left = (mainPanel.ClientSize.Width - separator.Width) / 2;
+                }
+
+                if (dateTimeLabel != null)
+                {
+                    dateTimeLabel.Left = (mainPanel.ClientSize.Width - dateTimeLabel.PreferredWidth) / 2;
+                }
+            }
+        }
+
+        private void LoadPage(string section)
+        {
             mainPanel.Controls.Clear();
+            UserControl controlToLoad = null;
 
-            // Create and load the DiagnosticsControl
-            DiagnosticsControl diagnosticsControl = new DiagnosticsControl();
-            diagnosticsControl.Dock = DockStyle.Fill;
-            mainPanel.Controls.Add(diagnosticsControl);
-        }
-        private void InstallButton_Click(object sender, EventArgs e)
-        {
-            mainPanel.Controls.Clear(); // Remove existing content
+            lblTitle.Visible = false;
+            lblWelcome.Visible = false;
+            lblDescription.Visible = false;
 
-            // Load the Install page inside mainPanel
-            InstallControl installControl = new InstallControl();
-            installControl.Dock = DockStyle.Fill;
-            mainPanel.Controls.Add(installControl);
-        }
+            switch (section)
+            {
+                case "Diagnostics":
+                    controlToLoad = new DiagnosticsControl();
+                    break;
+                case "Malware":
+                    controlToLoad = new MalwareControl();
+                    break;
+                case "Install":
+                    controlToLoad = new InstallControl();
+                    break;
+                case "Clean Corruption":
+                    controlToLoad = new CleanCorruptionForm();
+                    break;
+                case "Updates":
+                    controlToLoad = new UpdatesControl();
+                    break;
+                case "Temporary Files":
+                    controlToLoad = new TempFilesControl();
+                    break;
+                default:
+                    MessageBox.Show("Unknown section: " + section);
+                    break;
+            }
 
-        private void MalwareButton_Click(object sender, EventArgs e)
-        {
-            mainPanel.Controls.Clear(); // Remove existing content
-
-            // Load the Malware page inside mainPanel
-            MalwareControl malwareControl = new MalwareControl();
-            malwareControl.Dock = DockStyle.Fill;
-            mainPanel.Controls.Add(malwareControl);
-        }
-
-
-        private void CleanCorruptionButton_Click(object sender, EventArgs e)
-        {
-            mainPanel.Controls.Clear(); // Remove existing content
-
-            // Load the Clean Corruption page inside mainPanel
-            CleanCorruptionForm cleanControl = new CleanCorruptionForm();
-            cleanControl.Dock = DockStyle.Fill;
-            mainPanel.Controls.Add(cleanControl);
-        }
-
-        private void UpdatesButton_Click(object sender, EventArgs e)
-        {
-            mainPanel.Controls.Clear(); // Clear current content
-
-            UpdatesControl updatesControl = new UpdatesControl();
-            updatesControl.Dock = DockStyle.Fill;
-
-            mainPanel.Controls.Add(updatesControl);
-        }
-
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            this.Text = "Digital Windex";
-            this.lblWelcome.Text = "Hello " + Environment.UserName + "!";
-            LoadHomePage();
+            if (controlToLoad != null)
+            {
+                controlToLoad.Dock = DockStyle.Fill;
+                mainPanel.Controls.Add(controlToLoad);
+            }
         }
 
         private void mainPanel_Paint(object sender, PaintEventArgs e)
         {
-            // Optional: Add custom painting logic here if needed
+            // Optional custom drawing
         }
 
         private void lblDescription_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Description clicked!");
-        }
-
-        private void sidePanel_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

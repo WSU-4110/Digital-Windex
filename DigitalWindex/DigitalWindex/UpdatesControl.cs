@@ -1,37 +1,31 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DigitalWindexUI
+namespace DesktopApp
 {
     public partial class UpdatesControl : UserControl
     {
         public UpdatesControl()
         {
             InitializeComponent();
+            this.Resize += UpdatesControl_Resize;
         }
 
-        private void UpdatesForm_Load(object sender, EventArgs e)
+        private void UpdatesControl_Load(object sender, EventArgs e)
         {
-            // Optional: Code to run when the form loads
+            // Optional: logic on load
         }
 
         private void BtnCheckUpdates_Click(object sender, EventArgs e)
         {
-            // Logic for checking updates
-            MessageBox.Show("Checking for updates...", "Updates");
+            MessageBox.Show("Checking for updates...", "System Updates", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        private void BtnInstallUpdates_Click(object sender, EventArgs e)
+        private void UpdatesControl_Resize(object sender, EventArgs e)
         {
-            // Logic for installing updates
-            MessageBox.Show("Installing updates...", "Updates");
+            // Ensure content stays centered (if not using full Dock)
+            contentLayout.Left = (this.Width - contentLayout.Width) / 2;
+            contentLayout.Top = (this.Height - contentLayout.Height) / 2;
         }
     }
 }

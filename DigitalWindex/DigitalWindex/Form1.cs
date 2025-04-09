@@ -209,5 +209,10 @@ namespace DesktopApp
         {
             MessageBox.Show("Description clicked!");
         }
+
+        private void mainPanel_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

@@ -47,3 +47,18 @@ C:\Users\reshu\OneDrive\Desktop\Wayne\winter 2025\software engineering\digitalwi
 C:\Users\reshu\OneDrive\Desktop\Wayne\winter 2025\software engineering\digitalwindex\DigitalWindex3.3\DigitalWindex\DigitalWindex\obj\Debug\DigitalWindexUI.exe
 C:\Users\reshu\OneDrive\Desktop\Wayne\winter 2025\software engineering\digitalwindex\DigitalWindex3.3\DigitalWindex\DigitalWindex\obj\Debug\DigitalWindexUI.pdb
 C:\Users\reshu\OneDrive\Desktop\Wayne\winter 2025\software engineering\digitalwindex\DigitalWindex3.3\DigitalWindex\DigitalWindex\obj\Debug\DesktopApp.UpdatesControl.resources
+C:\Users\Clara\Source\Repos\Digital-Windex_4.8\DigitalWindex\DigitalWindex\obj\Debug\DigitalWindexUI.csproj.AssemblyReference.cache
+C:\Users\Clara\Source\Repos\Digital-Windex_4.8\DigitalWindex\DigitalWindex\obj\Debug\DesktopApp.DiagnosticsControl.resources
+C:\Users\Clara\Source\Repos\Digital-Windex_4.8\DigitalWindex\DigitalWindex\obj\Debug\DesktopApp.Form1.resources
+C:\Users\Clara\Source\Repos\Digital-Windex_4.8\DigitalWindex\DigitalWindex\obj\Debug\DesktopApp.InstallControl.resources
+C:\Users\Clara\Source\Repos\Digital-Windex_4.8\DigitalWindex\DigitalWindex\obj\Debug\DesktopApp.MalwareControl.resources
+C:\Users\Clara\Source\Repos\Digital-Windex_4.8\DigitalWindex\DigitalWindex\obj\Debug\DigitalWindexUI.Properties.Resources.resources
+C:\Users\Clara\Source\Repos\Digital-Windex_4.8\DigitalWindex\DigitalWindex\obj\Debug\DesktopApp.TempFilesControl.resources
+C:\Users\Clara\Source\Repos\Digital-Windex_4.8\DigitalWindex\DigitalWindex\obj\Debug\DesktopApp.UpdatesControl.resources
+C:\Users\Clara\Source\Repos\Digital-Windex_4.8\DigitalWindex\DigitalWindex\obj\Debug\DigitalWindexUI.csproj.GenerateResource.cache
+C:\Users\Clara\Source\Repos\Digital-Windex_4.8\DigitalWindex\DigitalWindex\obj\Debug\DigitalWindexUI.csproj.CoreCompileInputs.cache
+C:\Users\Clara\Source\Repos\Digital-Windex_4.8\DigitalWindex\DigitalWindex\obj\Debug\DigitalWindexUI.exe
+C:\Users\Clara\Source\Repos\Digital-Windex_4.8\DigitalWindex\DigitalWindex\obj\Debug\DigitalWindexUI.pdb
+C:\Users\Clara\Source\Repos\Digital-Windex_4.8\DigitalWindex\DigitalWindex\bin\Debug\DigitalWindexUI.exe.config
+C:\Users\Clara\Source\Repos\Digital-Windex_4.8\DigitalWindex\DigitalWindex\bin\Debug\DigitalWindexUI.exe
+C:\Users\Clara\Source\Repos\Digital-Windex_4.8\DigitalWindex\DigitalWindex\bin\Debug\DigitalWindexUI.pdb

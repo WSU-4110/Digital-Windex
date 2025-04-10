@@ -3,6 +3,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 namespace DigitalWindex.Backend
 {
     internal class SystemUpdate
@@ -16,6 +17,8 @@ namespace DigitalWindex.Backend
                 Verb = "open"
             };
             Process.Start(psiSystemUpdate);
+
+            LOG.WriteLog();
         }
     }
 }

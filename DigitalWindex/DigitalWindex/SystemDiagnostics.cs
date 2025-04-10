@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DigitalWindex.Backend;
+using System;
 using System.Diagnostics;
 using System.IO;
 
@@ -37,6 +38,8 @@ foreach ($c in $cpu) {
                 UseShellExecute = false,
                 CreateNoWindow = true
             };
+
+            LOG.WriteLog();
 
             try
             {

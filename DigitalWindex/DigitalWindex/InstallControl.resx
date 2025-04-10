@@ -118,19 +118,10 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="lblDescription.Text" xml:space="preserve">
-    <value>Welcome to the installation section of Digital Windex! 
+    <value>You are currently in the Recovery section of Digital Windex!
 
-This section is useful for two main reasons:
-- If you want to start fresh on your PC by wiping all of your current user data and programs
-- If the corruption on your PC is too severe to be fixed by DISM (Clean Corruption)
+From here, you can open Windows' built-in Recovery Settings, where you have options to reset or repair your PC if it’s running poorly or experiencing serious issues. By choosing between keeping personal files or removing everything, you can address system corruption, restore performance, and essentially ‘start fresh’—all guided by Windows' straightforward wizard.
 
-Keep my files reset: Use if you want to fix severe OS corruption without losing your data
-Remove everything reset: Use if you want to start fresh or if you already tried a keep my files reset to fix OS corruption to no avail.
-
-These are the only two options on Windows 10. However, if you are on Windows 11, you will see more options for fixing corruption: 
-- Fix problems without resetting your PC 
-- Fix problems using Windows Update
-
-You can use these extra two options for fixing corruption on your PC.</value>
+WARNING: All of your user data and installed programs will be deleted if you choose to reset and remove everything!</value>
   </data>
 </root>

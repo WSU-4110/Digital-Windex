@@ -17,6 +17,8 @@ namespace DigitalWindex.Backend
                 Verb = "open"
             };
             Process.Start(psiDriverUpdate);
+
+            LOG.WriteLog();
         }
 
     }

@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="LOGS.cs" />
     <Compile Include="DriverUpdate.cs" />
     <Compile Include="SystemUpdate.cs" />
     <Compile Include="CleanCorruptionForm.cs">
@@ -94,7 +95,16 @@
     <Compile Include="UpdatesControl.Designer.cs">
       <DependentUpon>UpdatesControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="LogControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LogControl.Designer.cs">
+      <DependentUpon>LogControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="WindowsRecoveryLauncher.cs" />
+    <EmbeddedResource Include="CleanCorruptionForm.resx">
+      <DependentUpon>CleanCorruptionForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DiagnosticsControl.resx">
       <DependentUpon>DiagnosticsControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -103,6 +113,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="InstallControl.resx">
       <DependentUpon>InstallControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogControl.resx">
+      <DependentUpon>LogControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MalwareControl.resx">
       <DependentUpon>MalwareControl.cs</DependentUpon>

@@ -21,6 +21,12 @@ namespace DesktopApp
         {
             // Call the DISM cleanup function
             _ = SFC_DISM.RunDISMCleanup();
+            LOG.WriteLog();
+        }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

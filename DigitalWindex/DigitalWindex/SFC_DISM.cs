@@ -27,6 +27,7 @@ namespace DigitalWindex.Backend
                                     "Scan Completed",
                                     MessageBoxButtons.OK,
                                     MessageBoxIcon.Information);
+
                 }
                 catch (Exception ex)
                 {
@@ -35,6 +36,7 @@ namespace DigitalWindex.Backend
                                     MessageBoxButtons.OK,
                                     MessageBoxIcon.Error);
                 }
+                
             }
         }
 

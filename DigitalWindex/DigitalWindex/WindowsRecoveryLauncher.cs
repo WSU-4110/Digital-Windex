@@ -11,7 +11,7 @@ namespace DigitalWindex.Backend
         {
             ProcessStartInfo psi = new ProcessStartInfo("ms-settings:recovery")
             {
-                UseShellExecute = true, 
+                UseShellExecute = true,
                 Verb = "open"
             };
             Process.Start(psi);

@@ -1,13 +1,24 @@
-﻿using System;
-using System.Diagnostics;
-using System.IO;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.Diagnostics;
+
 
 namespace DigitalWindex.Backend
 {
-    internal class SystemUpdate
+    public static class SystemUpdate
     {
+
+        private static IProcessRunner _processRunner = new ProcessRunner();
+
+        public static void SetProcessRunner(IProcessRunner processRunner)
+        {
+            _processRunner = processRunner;
+        }
+
+        //private static ILogger _logger = new RealLogger();
+
+        //public static void SetLogger(ILogger logger)
+        //{
+        //    _logger = logger;
+        //}
 
         public static void RunSystemUpdate()
         {
@@ -16,7 +27,7 @@ namespace DigitalWindex.Backend
                 UseShellExecute = true,
                 Verb = "open"
             };
-            Process.Start(psiSystemUpdate);
+            _processRunner.Start(psiSystemUpdate);
 
             LOG.WriteLog();
         }

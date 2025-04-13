@@ -40,5 +40,10 @@ namespace DesktopApp
         {
 
         }
+
+        private void contentLayout_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

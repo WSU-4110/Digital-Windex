@@ -8,6 +8,14 @@ namespace DigitalWindex.Backend
 {
     public class SFC_DISM
     {
+
+        private static IProcessRunner _processRunner = new ProcessRunner();
+
+        public static void SetProcessRunner(IProcessRunner processRunner)
+        {
+            _processRunner = processRunner;
+        }
+
         public static async Task RunDISMCleanup()
         {
             DialogResult dialogResult = MessageBox.Show(
@@ -36,7 +44,7 @@ namespace DigitalWindex.Backend
                                     MessageBoxButtons.OK,
                                     MessageBoxIcon.Error);
                 }
-                
+
             }
         }
 

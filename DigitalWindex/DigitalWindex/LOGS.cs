@@ -6,8 +6,19 @@ using System.Windows.Forms;
 
 namespace DigitalWindex.Backend
 {
+
+
+
     public static class LOG
     {
+
+        private static IProcessRunner _processRunner = new ProcessRunner();
+
+        public static void SetProcessRunner(IProcessRunner processRunner)
+        {
+            _processRunner = processRunner;
+        }
+
 
         private static readonly string logFilePath = Path.Combine(
             Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData),
@@ -17,7 +28,7 @@ namespace DigitalWindex.Backend
         public static void CreateLog()
         {
             //get the path to where the file will be made
-            File.Create(logFilePath);
+            using (var fs = File.Create(logFilePath)) { }
         }
 
         public static void OpenLog()
@@ -31,7 +42,7 @@ namespace DigitalWindex.Backend
             {
                 UseShellExecute = true,
             };
-            Process.Start(psiOpenLog);
+            _processRunner.Start(psiOpenLog);
         }
 
         public static void WriteLog()
@@ -39,13 +50,15 @@ namespace DigitalWindex.Backend
 
             StreamWriter textWriter = new StreamWriter(logFilePath, append: true);
 
+            //determine which function called the log, and write appropriate message
             if ((new System.Diagnostics.StackTrace()).GetFrame(1).GetMethod().Name == "RunDriverUpdate")
             {
                 using (textWriter)
                 {
                     textWriter.WriteLine($"- {DateTime.Now}: Ran Driver Update Function");
                 }
-            }else if ((new System.Diagnostics.StackTrace()).GetFrame(1).GetMethod().Name == "RunSystemUpdate")
+            }
+            else if ((new System.Diagnostics.StackTrace()).GetFrame(1).GetMethod().Name == "RunSystemUpdate")
             {
                 using (textWriter)
                 {
@@ -87,6 +100,9 @@ namespace DigitalWindex.Backend
                     textWriter.WriteLine($"- {DateTime.Now}: Cleaned Temporary Files");
                 }
             }
+
+            textWriter.Close();
+
         }
 
         public static bool LogFileExists()

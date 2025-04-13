@@ -39,17 +39,20 @@ namespace DesktopApp
             this.contentLayout.Controls.Add(this.lblTitle, 0, 0);
             this.contentLayout.Controls.Add(this.lblDescription, 0, 1);
             this.contentLayout.Controls.Add(this.btnSystemUpdates, 0, 2);
-            this.contentLayout.Controls.Add(this.btnDriverUpdates, 0, 2);
+            this.contentLayout.Controls.Add(this.btnDriverUpdates, 0, 3);
             this.contentLayout.Location = new System.Drawing.Point(0, 0);
             this.contentLayout.Margin = new System.Windows.Forms.Padding(0, 50, 0, 0);
             this.contentLayout.Name = "contentLayout";
             this.contentLayout.Padding = new System.Windows.Forms.Padding(10);
-            this.contentLayout.RowCount = 3;
+            this.contentLayout.RowCount = 4;
             this.contentLayout.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.contentLayout.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.contentLayout.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.contentLayout.Size = new System.Drawing.Size(608, 244);
+            this.contentLayout.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.contentLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.contentLayout.Size = new System.Drawing.Size(608, 295);
             this.contentLayout.TabIndex = 0;
+            this.contentLayout.Paint += new System.Windows.Forms.PaintEventHandler(this.contentLayout_Paint);
             // 
             // lblTitle
             // 
@@ -80,34 +83,33 @@ namespace DesktopApp
             this.lblDescription.Text = "Check for the latest updates to keep your system secure and up to date.";
             this.lblDescription.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btnCheckUpdates
-            // renamed the buttons because its system updates and driver updates - Clara
+            // btnSystemUpdates
             // 
             this.btnSystemUpdates.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnSystemUpdates.AutoSize = true;
             this.btnSystemUpdates.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnSystemUpdates.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
-            this.btnSystemUpdates.Location = new System.Drawing.Point(384, 422);
+            this.btnSystemUpdates.Location = new System.Drawing.Point(148, 275);
             this.btnSystemUpdates.Margin = new System.Windows.Forms.Padding(0, 10, 0, 10);
             this.btnSystemUpdates.Name = "btnSystemUpdates";
             this.btnSystemUpdates.Padding = new System.Windows.Forms.Padding(20, 10, 20, 10);
-            this.btnSystemUpdates.Size = new System.Drawing.Size(236, 54);
+            this.btnSystemUpdates.Size = new System.Drawing.Size(312, 54);
             this.btnSystemUpdates.TabIndex = 1;
             this.btnSystemUpdates.Text = "Check for System Updates";
             this.btnSystemUpdates.UseVisualStyleBackColor = true;
             this.btnSystemUpdates.Click += new System.EventHandler(this.BtnSystemUpdates_Click);
             // 
-            // btnInstallUpdates
+            // btnDriverUpdates
             // 
             this.btnDriverUpdates.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnDriverUpdates.AutoSize = true;
             this.btnDriverUpdates.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnDriverUpdates.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
-            this.btnDriverUpdates.Location = new System.Drawing.Point(402, 486);
+            this.btnDriverUpdates.Location = new System.Drawing.Point(154, 171);
             this.btnDriverUpdates.Margin = new System.Windows.Forms.Padding(0, 0, 0, 40);
             this.btnDriverUpdates.Name = "btnDriverUpdates";
             this.btnDriverUpdates.Padding = new System.Windows.Forms.Padding(20, 10, 20, 10);
-            this.btnDriverUpdates.Size = new System.Drawing.Size(200, 54);
+            this.btnDriverUpdates.Size = new System.Drawing.Size(299, 54);
             this.btnDriverUpdates.TabIndex = 2;
             this.btnDriverUpdates.Text = "Check for Driver Updates";
             this.btnDriverUpdates.UseVisualStyleBackColor = true;

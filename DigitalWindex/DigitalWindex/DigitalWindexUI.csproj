@@ -48,6 +48,12 @@
   <ItemGroup>
     <Compile Include="LOGS.cs" />
     <Compile Include="DriverUpdate.cs" />
+    <Compile Include="PolicyChecker.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PolicyChecker.Designer.cs">
+      <DependentUpon>PolicyChecker.cs</DependentUpon>
+    </Compile>
     <Compile Include="SystemUpdate.cs" />
     <Compile Include="CleanCorruptionForm.cs">
       <SubType>UserControl</SubType>

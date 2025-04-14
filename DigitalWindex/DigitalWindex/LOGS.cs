@@ -45,7 +45,8 @@ namespace DigitalWindex.Backend
                 {
                     textWriter.WriteLine($"- {DateTime.Now}: Ran Driver Update Function");
                 }
-            }else if ((new System.Diagnostics.StackTrace()).GetFrame(1).GetMethod().Name == "RunSystemUpdate")
+            }
+            else if ((new System.Diagnostics.StackTrace()).GetFrame(1).GetMethod().Name == "RunSystemUpdate")
             {
                 using (textWriter)
                 {
@@ -85,6 +86,13 @@ namespace DigitalWindex.Backend
                 using (textWriter)
                 {
                     textWriter.WriteLine($"- {DateTime.Now}: Cleaned Temporary Files");
+                }
+            }
+            else if ((new System.Diagnostics.StackTrace()).GetFrame(1).GetMethod().Name == "BtnCheckPolicies_Click")
+            {
+                using (textWriter)
+                {
+                    textWriter.WriteLine($"- {DateTime.Now}: Checked Windows Policies");
                 }
             }
         }

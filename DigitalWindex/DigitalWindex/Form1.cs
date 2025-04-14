@@ -39,7 +39,8 @@ namespace DesktopApp
             string[] buttonNames =
             {
                 "Home", "Diagnostics", "Malware",
-                "Install", "Clean Corruption", "Updates", "Temporary Files", "Log"
+                "Install", "Clean Corruption", "Updates", "Temporary Files", 
+                "Policy Checker", "Log"
             };
 
             sideButtons = new Button[buttonNames.Length];
@@ -187,6 +188,9 @@ namespace DesktopApp
                     break;
                 case "Temporary Files":
                     controlToLoad = new TempFilesControl();
+                    break;
+                case "Policy Checker":
+                    controlToLoad = new PolicyCheckerControl();
                     break;
                 case "Log":
                     controlToLoad = new LogControl();

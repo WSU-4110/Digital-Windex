@@ -5,5 +5,7 @@
 *.tmp
 *.log
 *.db
+bin
+obj
 Thumbs.db
 desktop.ini

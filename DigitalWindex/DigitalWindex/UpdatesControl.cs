@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DigitalWindex.Backend;
+using System;
 using System.Windows.Forms;
 
 namespace DesktopApp
@@ -16,9 +17,16 @@ namespace DesktopApp
             // Optional: logic on load
         }
 
-        private void BtnCheckUpdates_Click(object sender, EventArgs e)
+        private void BtnSystemUpdates_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Checking for updates...", "System Updates", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //call SYSTEM_UPDATES function
+            SystemUpdate.RunSystemUpdate();
+        }
+
+        private void BtnDriverUpdates_Click(object sender, EventArgs e)
+        {          
+            //call driver updates
+            DriverUpdate.RunDriverUpdate();
         }
 
         private void UpdatesControl_Resize(object sender, EventArgs e)

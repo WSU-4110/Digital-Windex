@@ -3,13 +3,13 @@ using System.Windows.Forms;
 
 namespace DesktopApp
 {
-    partial class InstallControl
+    partial class LogControl
     {
         private System.ComponentModel.IContainer components = null;
         private TableLayoutPanel contentLayout;
         private Label lblTitle;
         private Label lblDescription;
-        private Button btnStartInstall;
+        private Button btnLog;
 
         protected override void Dispose(bool disposing)
         {
@@ -24,7 +24,7 @@ namespace DesktopApp
             this.contentLayout = new System.Windows.Forms.TableLayoutPanel();
             this.lblTitle = new System.Windows.Forms.Label();
             this.lblDescription = new System.Windows.Forms.Label();
-            this.btnStartInstall = new System.Windows.Forms.Button();
+            this.btnLog = new System.Windows.Forms.Button();
             this.contentLayout.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -35,7 +35,7 @@ namespace DesktopApp
             this.contentLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.contentLayout.Controls.Add(this.lblTitle, 0, 0);
             this.contentLayout.Controls.Add(this.lblDescription, 0, 1);
-            this.contentLayout.Controls.Add(this.btnStartInstall, 0, 2);
+            this.contentLayout.Controls.Add(this.btnLog, 0, 2);
             this.contentLayout.Dock = System.Windows.Forms.DockStyle.Fill;
             this.contentLayout.Location = new System.Drawing.Point(0, 0);
             this.contentLayout.Name = "contentLayout";
@@ -59,7 +59,7 @@ namespace DesktopApp
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(153, 56);
             this.lblTitle.TabIndex = 0;
-            this.lblTitle.Text = "Install";
+            this.lblTitle.Text = "Log";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblDescription
@@ -74,33 +74,33 @@ namespace DesktopApp
             this.lblDescription.Name = "lblDescription";
             this.lblDescription.Size = new System.Drawing.Size(700, 250);
             this.lblDescription.TabIndex = 1;
-            this.lblDescription.Text = resources.GetString("lblDescription.Text");
+            this.lblDescription.Text = "You are currently in the log section of Digital Windex. \n Here, you can be taken to " +
+                "a log of Digital Windex tools you ran. The log includes what tool you used, including time and date!";
             this.lblDescription.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblDescription.Click += new System.EventHandler(this.lblDescription_Click);
             // 
             // btnStartInstall
             // 
-            this.btnStartInstall.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnStartInstall.BackColor = System.Drawing.Color.White;
-            this.btnStartInstall.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
-            this.btnStartInstall.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStartInstall.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
-            this.btnStartInstall.ForeColor = System.Drawing.Color.Black;
-            this.btnStartInstall.Location = new System.Drawing.Point(402, 470);
-            this.btnStartInstall.Name = "btnStartInstall";
-            this.btnStartInstall.Size = new System.Drawing.Size(200, 45);
-            this.btnStartInstall.TabIndex = 2;
-            this.btnStartInstall.Text = "Start Installation";
-            this.btnStartInstall.UseVisualStyleBackColor = false;
-            this.btnStartInstall.Click += new System.EventHandler(this.BtnStartInstall_Click);
+            this.btnLog.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnLog.BackColor = System.Drawing.Color.White;
+            this.btnLog.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.btnLog.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLog.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.btnLog.ForeColor = System.Drawing.Color.Black;
+            this.btnLog.Location = new System.Drawing.Point(402, 470);
+            this.btnLog.Name = "btnLog";
+            this.btnLog.Size = new System.Drawing.Size(200, 45);
+            this.btnLog.TabIndex = 2;
+            this.btnLog.Text = "Open Log";
+            this.btnLog.UseVisualStyleBackColor = false;
+            this.btnLog.Click += new System.EventHandler(this.BtnLog_Click);
             // 
             // InstallControl
             // 
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.Controls.Add(this.contentLayout);
-            this.Name = "InstallControl";
+            this.Name = "LogControl";
             this.Size = new System.Drawing.Size(1005, 600);
-            this.Load += new System.EventHandler(this.InstallControl_Load);
+            this.Load += new System.EventHandler(this.LogControl_Load);
             this.contentLayout.ResumeLayout(false);
             this.contentLayout.PerformLayout();
             this.ResumeLayout(false);

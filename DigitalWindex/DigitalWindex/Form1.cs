@@ -56,6 +56,7 @@ namespace DesktopApp
                 Location = new Point((sidePanel.Width - 180) / 2, 10),
                 Margin = new Padding(0),
                 Anchor = AnchorStyles.Top
+
             };
             sidePanel.Controls.Add(logoBox);
 
@@ -223,6 +224,12 @@ namespace DesktopApp
                     break;
                 case "Temporary Files":
                     controlToLoad = new TempFilesControl();
+                    break;
+                case "Policy Checker":
+                    controlToLoad = new PolicyCheckerControl();
+                    break;
+                case "Log":
+                    controlToLoad = new LogControl();
                     break;
                 default:
                     MessageBox.Show("Unknown section: " + section);

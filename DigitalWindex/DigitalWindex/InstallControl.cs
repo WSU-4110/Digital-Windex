@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DigitalWindex.Backend;
+using System;
 using System.Diagnostics;
 using System.Windows.Forms;
 
@@ -31,6 +32,7 @@ namespace DesktopApp
                 try
                 {
                     Process.Start("ms-settings:recovery");
+                    LOG.WriteLog();
                 }
                 catch (Exception ex)
                 {
@@ -40,6 +42,16 @@ namespace DesktopApp
                                     MessageBoxIcon.Error);
                 }
             }
+        }
+
+        private void contentLayout_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void lblDescription_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

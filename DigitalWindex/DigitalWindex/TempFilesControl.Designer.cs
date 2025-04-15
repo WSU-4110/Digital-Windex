@@ -51,6 +51,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1005, 600);
             this.tableLayoutPanel1.TabIndex = 0;
+            this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
             // lblTitle
             // 
@@ -60,7 +61,7 @@
             this.lblTitle.ForeColor = System.Drawing.Color.White;
             this.lblTitle.Location = new System.Drawing.Point(216, 20);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(573, 37);
+            this.lblTitle.Size = new System.Drawing.Size(573, 46);
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "Temporary Files";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -70,10 +71,10 @@
             this.lblDescription.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblDescription.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.lblDescription.ForeColor = System.Drawing.Color.White;
-            this.lblDescription.Location = new System.Drawing.Point(223, 67);
+            this.lblDescription.Location = new System.Drawing.Point(223, 76);
             this.lblDescription.Margin = new System.Windows.Forms.Padding(10);
             this.lblDescription.Name = "lblDescription";
-            this.lblDescription.Size = new System.Drawing.Size(559, 468);
+            this.lblDescription.Size = new System.Drawing.Size(559, 454);
             this.lblDescription.TabIndex = 1;
             this.lblDescription.Text = resources.GetString("lblDescription.Text");
             this.lblDescription.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -83,9 +84,9 @@
             this.btnCleanTempFiles.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnCleanTempFiles.AutoSize = true;
             this.btnCleanTempFiles.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
-            this.btnCleanTempFiles.Location = new System.Drawing.Point(408, 548);
+            this.btnCleanTempFiles.Location = new System.Drawing.Point(387, 543);
             this.btnCleanTempFiles.Name = "btnCleanTempFiles";
-            this.btnCleanTempFiles.Size = new System.Drawing.Size(189, 29);
+            this.btnCleanTempFiles.Size = new System.Drawing.Size(231, 34);
             this.btnCleanTempFiles.TabIndex = 2;
             this.btnCleanTempFiles.Text = "Clean Temporary Files";
             this.btnCleanTempFiles.UseVisualStyleBackColor = true;

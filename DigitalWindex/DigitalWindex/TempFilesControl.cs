@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Windows.Forms;
+using DigitalWindex.Backend;
 
 namespace DesktopApp
 {
@@ -49,6 +50,8 @@ namespace DesktopApp
                 MessageBoxButtons.OK,
                 MessageBoxIcon.Information
             );
+
+            LOG.WriteLog();
         }
 
         /// <summary>
@@ -91,6 +94,11 @@ namespace DesktopApp
             {
                 Console.WriteLine($"Error cleaning {folderPath}: {ex.Message}");
             }
+        }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

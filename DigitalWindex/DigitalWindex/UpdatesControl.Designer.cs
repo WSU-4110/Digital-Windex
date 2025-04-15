@@ -10,6 +10,7 @@ namespace DesktopApp
         private Label lblTitle;
         private Label lblDescription;
         private Button btnSystemUpdates;
+        private Button btnDriverUpdates;
 
         protected override void Dispose(bool disposing)
         {
@@ -24,6 +25,7 @@ namespace DesktopApp
             this.lblTitle = new Label();
             this.lblDescription = new Label();
             this.btnSystemUpdates = new Button();
+            this.btnDriverUpdates = new Button();
 
             this.contentLayout.SuspendLayout();
             this.SuspendLayout();
@@ -38,7 +40,8 @@ namespace DesktopApp
             this.contentLayout.Margin = new Padding(0, 50, 0, 0);
             this.contentLayout.Name = "contentLayout";
             this.contentLayout.Padding = new Padding(10);
-            this.contentLayout.RowCount = 3;
+            this.contentLayout.RowCount = 4;
+            this.contentLayout.RowStyles.Add(new RowStyle());
             this.contentLayout.RowStyles.Add(new RowStyle());
             this.contentLayout.RowStyles.Add(new RowStyle());
             this.contentLayout.RowStyles.Add(new RowStyle());
@@ -81,10 +84,27 @@ namespace DesktopApp
             this.btnSystemUpdates.UseVisualStyleBackColor = false;
             this.btnSystemUpdates.Click += new System.EventHandler(this.BtnSystemUpdates_Click);
 
+            // btnDriverUpdates
+            this.btnDriverUpdates = new Button();
+            this.btnDriverUpdates.Anchor = AnchorStyles.Top;
+            this.btnDriverUpdates.AutoSize = true;
+            this.btnDriverUpdates.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            this.btnDriverUpdates.BackColor = Color.FromArgb(103, 80, 164);
+            this.btnDriverUpdates.ForeColor = Color.White;
+            this.btnDriverUpdates.FlatStyle = FlatStyle.Flat;
+            this.btnDriverUpdates.FlatAppearance.BorderSize = 0;
+            this.btnDriverUpdates.Padding = new Padding(20, 10, 20, 10);
+            this.btnDriverUpdates.Text = "Check Driver Updates";
+            this.btnDriverUpdates.Name = "btnDriverUpdates";
+            this.btnDriverUpdates.TabIndex = 3;
+            this.btnDriverUpdates.UseVisualStyleBackColor = false;
+            this.btnDriverUpdates.Click += new System.EventHandler(this.BtnDriverUpdates_Click);
+
             // Add controls to layout
             this.contentLayout.Controls.Add(this.lblTitle, 0, 0);
             this.contentLayout.Controls.Add(this.lblDescription, 0, 1);
             this.contentLayout.Controls.Add(this.btnSystemUpdates, 0, 2);
+            this.contentLayout.Controls.Add(this.btnDriverUpdates, 0, 3);
 
             // UpdatesControl
             this.BackColor = Color.FromArgb(244, 246, 249);

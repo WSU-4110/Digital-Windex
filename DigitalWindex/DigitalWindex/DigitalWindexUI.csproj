@@ -137,6 +137,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="TempFilesControl.resx">
       <DependentUpon>TempFilesControl.cs</DependentUpon>
@@ -183,7 +184,9 @@
     <Content Include="McAfeeStingerPortable\Other\Help\Images\Help_Logo_Top.png" />
     <Content Include="McAfeeStingerPortable\Other\Source\LauncherLicense.txt" />
     <Content Include="McAfeeStingerPortable\Other\Source\Readme.txt" />
-    <Content Include="spray_icon_142665.ico" />
+    <None Include="Resources\digital_windex.png" />
+    <None Include="Resources\logo_mini.png" />
+    <None Include="Resources\digital_windex_logo.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="McAfeeStingerPortable\App\Stinger\JAYS-DESKTOP\" />

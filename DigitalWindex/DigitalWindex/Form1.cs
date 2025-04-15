@@ -3,6 +3,7 @@ using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
 using DigitalWindexUI;
+using DigitalWindexUI.Properties;
 
 namespace DesktopApp
 {
@@ -38,34 +39,69 @@ namespace DesktopApp
         {
             string[] buttonNames =
             {
-                "Home", "Diagnostics", "Malware",
-                "Install", "Clean Corruption", "Updates", "Temporary Files", 
-                "Policy Checker", "Log"
+        "Home", "Diagnostics", "Malware",
+        "Install", "Clean Corruption", "Updates", "Temporary Files"
+    };
+
+            // Clear existing controls from the side panel
+            sidePanel.Controls.Clear();
+            sidePanel.BackColor = Color.FromArgb(30, 30, 50); // Optional: Match visual theme
+
+            // === Add Logo ===
+            PictureBox logoBox = new PictureBox
+            {
+                Image = Resources.logo_mini, // <- using embedded resource
+                SizeMode = PictureBoxSizeMode.Zoom,
+                Size = new Size(180, 100),
+                Location = new Point((sidePanel.Width - 180) / 2, 10),
+                Margin = new Padding(0),
+                Anchor = AnchorStyles.Top
+
+            };
+            sidePanel.Controls.Add(logoBox);
+
+            // === Create TableLayoutPanel for Buttons ===
+            TableLayoutPanel tablePanel = new TableLayoutPanel
+            {
+                Location = new Point(0, logoBox.Bottom + 10),
+                Size = new Size(sidePanel.Width, sidePanel.Height - logoBox.Bottom - 20),
+                RowCount = buttonNames.Length,
+                ColumnCount = 1,
+                Dock = DockStyle.None,
+                Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right,
+                BackColor = Color.Transparent
             };
 
-            sideButtons = new Button[buttonNames.Length];
-
+            tablePanel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100f));
             for (int i = 0; i < buttonNames.Length; i++)
             {
-                sideButtons[i] = new Button
+                tablePanel.RowStyles.Add(new RowStyle(SizeType.Percent, 100f / buttonNames.Length));
+            }
+
+            foreach (string name in buttonNames)
+            {
+                Button btn = new Button
                 {
-                    Text = buttonNames[i],
-                    Size = new Size(180, 40),
-                    Location = new Point(10, 20 + i * 50),
+                    Text = name,
+                    Dock = DockStyle.Fill,
                     Font = new Font("Segoe UI", 11F, FontStyle.Bold),
                     BackColor = Color.FromArgb(103, 80, 164),
                     ForeColor = Color.White,
-                    FlatStyle = FlatStyle.Flat
+                    FlatStyle = FlatStyle.Flat,
+                    Margin = new Padding(4, 4, 4, 4)
                 };
 
-                sideButtons[i].FlatAppearance.BorderSize = 0;
-                sideButtons[i].FlatAppearance.MouseOverBackColor = Color.FromArgb(130, 100, 200);
-                sideButtons[i].Cursor = Cursors.Hand;
+                btn.FlatAppearance.BorderSize = 0;
+                btn.FlatAppearance.MouseOverBackColor = Color.FromArgb(130, 100, 200);
+                btn.Cursor = Cursors.Hand;
+                btn.Click += SidebarButton_Click;
 
-                sideButtons[i].Click += SidebarButton_Click;
-                sidePanel.Controls.Add(sideButtons[i]);
+                tablePanel.Controls.Add(btn);
             }
+
+            sidePanel.Controls.Add(tablePanel);
         }
+
 
         private void SidebarButton_Click(object sender, EventArgs e)
         {

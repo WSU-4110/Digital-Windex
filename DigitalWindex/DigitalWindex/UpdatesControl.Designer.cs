@@ -24,6 +24,7 @@ namespace DesktopApp
             this.contentLayout = new System.Windows.Forms.TableLayoutPanel();
             this.lblTitle = new System.Windows.Forms.Label();
             this.lblDescription = new System.Windows.Forms.Label();
+
             this.btnSystemUpdates = new System.Windows.Forms.Button();
             this.btnDriverUpdates = new System.Windows.Forms.Button();
             this.contentLayout.SuspendLayout();
@@ -38,6 +39,7 @@ namespace DesktopApp
             this.contentLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.contentLayout.Controls.Add(this.lblTitle, 0, 0);
             this.contentLayout.Controls.Add(this.lblDescription, 0, 1);
+
             this.contentLayout.Controls.Add(this.btnSystemUpdates, 0, 2);
             this.contentLayout.Controls.Add(this.btnDriverUpdates, 0, 2);
             this.contentLayout.Location = new System.Drawing.Point(0, 0);
@@ -81,6 +83,7 @@ namespace DesktopApp
             this.lblDescription.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnCheckUpdates
+
             // renamed the buttons because its system updates and driver updates - Clara
             // 
             this.btnSystemUpdates.Anchor = System.Windows.Forms.AnchorStyles.Top;

@@ -40,7 +40,7 @@ namespace DesktopApp
             this.sidePanel.Location = new System.Drawing.Point(0, 0);
             this.sidePanel.Name = "sidePanel";
             this.sidePanel.Padding = new System.Windows.Forms.Padding(10);
-            this.sidePanel.Size = new System.Drawing.Size(220, 700);
+            this.sidePanel.Size = new System.Drawing.Size(294, 700);
             this.sidePanel.TabIndex = 1;
             // 
             // mainPanel
@@ -50,9 +50,9 @@ namespace DesktopApp
             this.mainPanel.Controls.Add(this.lblWelcome);
             this.mainPanel.Controls.Add(this.lblDescription);
             this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mainPanel.Location = new System.Drawing.Point(220, 0);
+            this.mainPanel.Location = new System.Drawing.Point(294, 0);
             this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(980, 700);
+            this.mainPanel.Size = new System.Drawing.Size(906, 700);
             this.mainPanel.TabIndex = 0;
             this.mainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.mainPanel_Paint_1);
             // 

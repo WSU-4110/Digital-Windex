@@ -35,5 +35,15 @@ namespace DesktopApp
                 MessageBox.Show("Error running diagnostics: " + ex.Message, "Execution Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void DiagnosticsControl_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblDescription_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

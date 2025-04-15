@@ -10,7 +10,6 @@ namespace DesktopApp
         private Label lblTitle;
         private Label lblDescription;
         private Button btnSystemUpdates;
-        private Button btnDriverUpdates;
 
         protected override void Dispose(bool disposing)
         {
@@ -21,110 +20,83 @@ namespace DesktopApp
 
         private void InitializeComponent()
         {
-            this.contentLayout = new System.Windows.Forms.TableLayoutPanel();
-            this.lblTitle = new System.Windows.Forms.Label();
-            this.lblDescription = new System.Windows.Forms.Label();
-            this.btnSystemUpdates = new System.Windows.Forms.Button();
-            this.btnDriverUpdates = new System.Windows.Forms.Button();
+            this.contentLayout = new TableLayoutPanel();
+            this.lblTitle = new Label();
+            this.lblDescription = new Label();
+            this.btnSystemUpdates = new Button();
+
             this.contentLayout.SuspendLayout();
             this.SuspendLayout();
-            // 
+
             // contentLayout
-            // 
-            this.contentLayout.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.contentLayout.Anchor = AnchorStyles.None;
             this.contentLayout.AutoSize = true;
-            this.contentLayout.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.contentLayout.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             this.contentLayout.ColumnCount = 1;
-            this.contentLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.contentLayout.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            this.contentLayout.Location = new Point(0, 0);
+            this.contentLayout.Margin = new Padding(0, 50, 0, 0);
+            this.contentLayout.Name = "contentLayout";
+            this.contentLayout.Padding = new Padding(10);
+            this.contentLayout.RowCount = 3;
+            this.contentLayout.RowStyles.Add(new RowStyle());
+            this.contentLayout.RowStyles.Add(new RowStyle());
+            this.contentLayout.RowStyles.Add(new RowStyle());
+
+            // lblTitle
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Dock = DockStyle.Fill;
+            this.lblTitle.Font = new Font("Century Gothic", 28F, FontStyle.Bold);
+            this.lblTitle.ForeColor = Color.FromArgb(103, 80, 164);
+            this.lblTitle.Margin = new Padding(0, 30, 0, 20);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new Size(460, 44);
+            this.lblTitle.Text = "System Updates";
+            this.lblTitle.TextAlign = ContentAlignment.MiddleCenter;
+
+            // lblDescription
+            this.lblDescription.AutoSize = true;
+            this.lblDescription.Dock = DockStyle.Fill;
+            this.lblDescription.Font = new Font("Segoe UI", 11F, FontStyle.Italic);
+            this.lblDescription.ForeColor = Color.Gray;
+            this.lblDescription.MaximumSize = new Size(700, 0);
+            this.lblDescription.Margin = new Padding(0, 0, 0, 30);
+            this.lblDescription.Name = "lblDescription";
+            this.lblDescription.Size = new Size(460, 20);
+            this.lblDescription.Text = "Check for the latest updates to keep your system secure and up to date.";
+            this.lblDescription.TextAlign = ContentAlignment.MiddleCenter;
+
+            // btnSystemUpdates
+            this.btnSystemUpdates = new Button();
+            this.btnSystemUpdates.Anchor = AnchorStyles.Top;
+            this.btnSystemUpdates.AutoSize = true;
+            this.btnSystemUpdates.Font = new Font("Arial", 12F, FontStyle.Bold);
+            this.btnSystemUpdates.Padding = new Padding(20, 10, 20, 10);
+            this.btnSystemUpdates.Name = "btnSystemUpdates";
+            this.btnSystemUpdates.Text = "Check System Updates";
+            this.btnSystemUpdates.BackColor = Color.FromArgb(103, 80, 164);
+            this.btnSystemUpdates.ForeColor = Color.White;
+            this.btnSystemUpdates.FlatStyle = FlatStyle.Flat;
+            this.btnSystemUpdates.FlatAppearance.BorderSize = 0;
+            this.btnSystemUpdates.UseVisualStyleBackColor = false;
+            this.btnSystemUpdates.Click += new System.EventHandler(this.BtnSystemUpdates_Click);
+
+            // Add controls to layout
             this.contentLayout.Controls.Add(this.lblTitle, 0, 0);
             this.contentLayout.Controls.Add(this.lblDescription, 0, 1);
             this.contentLayout.Controls.Add(this.btnSystemUpdates, 0, 2);
-            this.contentLayout.Controls.Add(this.btnDriverUpdates, 0, 2);
-            this.contentLayout.Location = new System.Drawing.Point(0, 0);
-            this.contentLayout.Margin = new System.Windows.Forms.Padding(0, 50, 0, 0);
-            this.contentLayout.Name = "contentLayout";
-            this.contentLayout.Padding = new System.Windows.Forms.Padding(10);
-            this.contentLayout.RowCount = 3;
-            this.contentLayout.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.contentLayout.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.contentLayout.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.contentLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.contentLayout.Size = new System.Drawing.Size(480, 273);
-            this.contentLayout.TabIndex = 0;
-            // 
-            // lblTitle
-            // 
-            this.lblTitle.AutoSize = true;
-            this.lblTitle.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblTitle.Font = new System.Drawing.Font("Century Gothic", 28F, System.Drawing.FontStyle.Bold);
-            this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(80)))), ((int)(((byte)(164)))));
-            this.lblTitle.Location = new System.Drawing.Point(10, 40);
-            this.lblTitle.Margin = new System.Windows.Forms.Padding(0, 30, 0, 20);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(460, 44);
-            this.lblTitle.TabIndex = 0;
-            this.lblTitle.Text = "System Updates";
-            this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblDescription
-            // 
-            this.lblDescription.AutoSize = true;
-            this.lblDescription.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblDescription.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Italic);
-            this.lblDescription.ForeColor = System.Drawing.Color.Gray;
-            this.lblDescription.Location = new System.Drawing.Point(10, 104);
-            this.lblDescription.Margin = new System.Windows.Forms.Padding(0, 0, 0, 30);
-            this.lblDescription.MaximumSize = new System.Drawing.Size(700, 0);
-            this.lblDescription.Name = "lblDescription";
-            this.lblDescription.Size = new System.Drawing.Size(460, 20);
-            this.lblDescription.TabIndex = 1;
-            this.lblDescription.Text = "Check for the latest updates to keep your system secure and up to date.";
-            this.lblDescription.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btnSystemUpdates
-            // 
-            this.btnSystemUpdates.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnSystemUpdates.AutoSize = true;
-            this.btnSystemUpdates.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnSystemUpdates.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
-            this.btnSystemUpdates.Location = new System.Drawing.Point(109, 253);
-            this.btnSystemUpdates.Margin = new System.Windows.Forms.Padding(0, 10, 0, 10);
-            this.btnSystemUpdates.Name = "btnSystemUpdates";
-            this.btnSystemUpdates.Padding = new System.Windows.Forms.Padding(20, 10, 20, 10);
-            this.btnSystemUpdates.Size = new System.Drawing.Size(262, 1);
-            this.btnSystemUpdates.TabIndex = 1;
-            this.btnSystemUpdates.Text = "Check for System Updates";
-            this.btnSystemUpdates.UseVisualStyleBackColor = true;
-            this.btnSystemUpdates.Click += new System.EventHandler(this.BtnSystemUpdates_Click);
-            // 
-            // btnDriverUpdates
-            // 
-            this.btnDriverUpdates.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnDriverUpdates.AutoSize = true;
-            this.btnDriverUpdates.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnDriverUpdates.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
-            this.btnDriverUpdates.Location = new System.Drawing.Point(114, 154);
-            this.btnDriverUpdates.Margin = new System.Windows.Forms.Padding(0, 0, 0, 40);
-            this.btnDriverUpdates.Name = "btnDriverUpdates";
-            this.btnDriverUpdates.Padding = new System.Windows.Forms.Padding(20, 10, 20, 10);
-            this.btnDriverUpdates.Size = new System.Drawing.Size(251, 49);
-            this.btnDriverUpdates.TabIndex = 2;
-            this.btnDriverUpdates.Text = "Check for Driver Updates";
-            this.btnDriverUpdates.UseVisualStyleBackColor = true;
-            this.btnDriverUpdates.Click += new System.EventHandler(this.BtnDriverUpdates_Click);
-            // 
+
             // UpdatesControl
-            // 
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
+            this.BackColor = Color.FromArgb(244, 246, 249);
             this.Controls.Add(this.contentLayout);
             this.Name = "UpdatesControl";
-            this.Size = new System.Drawing.Size(1005, 600);
+            this.Size = new Size(1005, 600);
             this.Load += new System.EventHandler(this.UpdatesControl_Load_1);
+
             this.contentLayout.ResumeLayout(false);
             this.contentLayout.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
     }
 }

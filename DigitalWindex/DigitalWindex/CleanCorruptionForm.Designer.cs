@@ -54,7 +54,7 @@
             this.lblTitle.AutoSize = true;
             this.lblTitle.Dock = System.Windows.Forms.DockStyle.Top;
             this.lblTitle.Font = new System.Drawing.Font("Arial", 24F, System.Drawing.FontStyle.Bold);
-            this.lblTitle.ForeColor = System.Drawing.Color.MediumPurple;
+            this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(103, 80, 164);
             this.lblTitle.Location = new System.Drawing.Point(216, 20);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(573, 37);
@@ -86,8 +86,14 @@
             this.btnRunCleanup.Size = new System.Drawing.Size(189, 29);
             this.btnRunCleanup.TabIndex = 2;
             this.btnRunCleanup.Text = "Run DISM Cleanup";
-            this.btnRunCleanup.UseVisualStyleBackColor = true;
+            this.btnRunCleanup.BackColor = System.Drawing.Color.FromArgb(103, 80, 164); 
+            this.btnRunCleanup.ForeColor = System.Drawing.Color.White; 
+            this.btnRunCleanup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRunCleanup.FlatAppearance.BorderSize = 0;
+            this.btnRunCleanup.UseVisualStyleBackColor = false;
+
             this.btnRunCleanup.Click += new System.EventHandler(this.BtnRunCleanup_Click);
+
             // 
             // CleanCorruptionForm
             // 

@@ -20,91 +20,75 @@ namespace DesktopApp
 
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InstallControl));
-            this.contentLayout = new System.Windows.Forms.TableLayoutPanel();
-            this.lblTitle = new System.Windows.Forms.Label();
-            this.lblDescription = new System.Windows.Forms.Label();
-            this.btnLog = new System.Windows.Forms.Button();
+            this.contentLayout = new TableLayoutPanel();
+            this.lblTitle = new Label();
+            this.lblDescription = new Label();
+            this.btnLog = new Button();
             this.contentLayout.SuspendLayout();
             this.SuspendLayout();
-            // 
+
             // contentLayout
-            // 
-            this.contentLayout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
+            this.contentLayout.BackColor = Color.FromArgb(244, 246, 249);
             this.contentLayout.ColumnCount = 1;
-            this.contentLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.contentLayout.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
             this.contentLayout.Controls.Add(this.lblTitle, 0, 0);
             this.contentLayout.Controls.Add(this.lblDescription, 0, 1);
             this.contentLayout.Controls.Add(this.btnLog, 0, 2);
-            this.contentLayout.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.contentLayout.Location = new System.Drawing.Point(0, 0);
+            this.contentLayout.Dock = DockStyle.Fill;
+            this.contentLayout.Location = new Point(0, 0);
             this.contentLayout.Name = "contentLayout";
-            this.contentLayout.Padding = new System.Windows.Forms.Padding(10);
+            this.contentLayout.Padding = new Padding(10);
             this.contentLayout.RowCount = 3;
-            this.contentLayout.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.contentLayout.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.contentLayout.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.contentLayout.Size = new System.Drawing.Size(1005, 600);
+            this.contentLayout.RowStyles.Add(new RowStyle());
+            this.contentLayout.RowStyles.Add(new RowStyle());
+            this.contentLayout.RowStyles.Add(new RowStyle());
+            this.contentLayout.Size = new Size(1005, 600);
             this.contentLayout.TabIndex = 0;
-            this.contentLayout.Paint += new System.Windows.Forms.PaintEventHandler(this.contentLayout_Paint);
-            // 
+
             // lblTitle
-            // 
-            this.lblTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblTitle.Anchor = AnchorStyles.None;
             this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Century Gothic", 28F, System.Drawing.FontStyle.Bold);
-            this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(80)))), ((int)(((byte)(164)))));
-            this.lblTitle.Location = new System.Drawing.Point(426, 40);
-            this.lblTitle.Margin = new System.Windows.Forms.Padding(0, 30, 0, 20);
+            this.lblTitle.Font = new Font("Century Gothic", 28F, FontStyle.Bold);
+            this.lblTitle.ForeColor = Color.FromArgb(103, 80, 164);
+            this.lblTitle.Margin = new Padding(0, 30, 0, 20);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(153, 56);
-            this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "Log";
-            this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
+            this.lblTitle.TextAlign = ContentAlignment.MiddleCenter;
+
             // lblDescription
-            // 
-            this.lblDescription.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblDescription.Anchor = AnchorStyles.None;
             this.lblDescription.AutoSize = true;
-            this.lblDescription.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Italic);
-            this.lblDescription.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(108)))), ((int)(((byte)(108)))));
-            this.lblDescription.Location = new System.Drawing.Point(152, 116);
-            this.lblDescription.Margin = new System.Windows.Forms.Padding(0, 0, 0, 30);
-            this.lblDescription.MaximumSize = new System.Drawing.Size(700, 0);
+            this.lblDescription.Font = new Font("Segoe UI", 11F, FontStyle.Italic);
+            this.lblDescription.ForeColor = Color.FromArgb(108, 108, 108);
+            this.lblDescription.MaximumSize = new Size(700, 0);
+            this.lblDescription.Margin = new Padding(0, 0, 0, 30);
             this.lblDescription.Name = "lblDescription";
-            this.lblDescription.Size = new System.Drawing.Size(700, 250);
-            this.lblDescription.TabIndex = 1;
-            this.lblDescription.Text = "You are currently in the log section of Digital Windex. \n Here, you can be taken to " +
-                "a log of Digital Windex tools you ran. The log includes what tool you used, including time and date!";
-            this.lblDescription.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btnStartInstall
-            // 
-            this.btnLog.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnLog.BackColor = System.Drawing.Color.White;
-            this.btnLog.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
-            this.btnLog.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLog.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
-            this.btnLog.ForeColor = System.Drawing.Color.Black;
-            this.btnLog.Location = new System.Drawing.Point(402, 470);
+            this.lblDescription.Text = "You are currently in the log section of Digital Windex. \nHere, you can be taken to a log of Digital Windex tools you ran. The log includes what tool you used, including time and date!";
+            this.lblDescription.TextAlign = ContentAlignment.MiddleCenter;
+
+            // btnLog
+            this.btnLog.Anchor = AnchorStyles.None;
+            this.btnLog.AutoSize = true;
             this.btnLog.Name = "btnLog";
-            this.btnLog.Size = new System.Drawing.Size(200, 45);
-            this.btnLog.TabIndex = 2;
             this.btnLog.Text = "Open Log";
+            this.btnLog.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            this.btnLog.BackColor = Color.FromArgb(103, 80, 164);
+            this.btnLog.ForeColor = Color.White;
+            this.btnLog.FlatStyle = FlatStyle.Flat;
+            this.btnLog.FlatAppearance.BorderSize = 0;
             this.btnLog.UseVisualStyleBackColor = false;
+            this.btnLog.Padding = new Padding(20, 10, 20, 10);
             this.btnLog.Click += new System.EventHandler(this.BtnLog_Click);
-            // 
-            // InstallControl
-            // 
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
+
+            // LogControl
+            this.BackColor = Color.FromArgb(244, 246, 249);
             this.Controls.Add(this.contentLayout);
             this.Name = "LogControl";
-            this.Size = new System.Drawing.Size(1005, 600);
+            this.Size = new Size(1005, 600);
             this.Load += new System.EventHandler(this.LogControl_Load);
             this.contentLayout.ResumeLayout(false);
             this.contentLayout.PerformLayout();
             this.ResumeLayout(false);
-
         }
     }
 }

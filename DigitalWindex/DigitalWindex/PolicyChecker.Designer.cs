@@ -55,8 +55,13 @@ namespace DesktopApp
             this.btnCheckPolicies.Size = new System.Drawing.Size(220, 45);
             this.btnCheckPolicies.TabIndex = 2;
             this.btnCheckPolicies.Text = "Check Policies";
-            this.btnCheckPolicies.UseVisualStyleBackColor = true;
+            this.btnCheckPolicies.BackColor = System.Drawing.Color.FromArgb(103, 80, 164);
+            this.btnCheckPolicies.ForeColor = System.Drawing.Color.White;
+            this.btnCheckPolicies.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCheckPolicies.FlatAppearance.BorderSize = 0;
+            this.btnCheckPolicies.UseVisualStyleBackColor = false;
             this.btnCheckPolicies.Click += new System.EventHandler(this.BtnCheckPolicies_Click);
+
 
             // PolicyCheckerControl
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));

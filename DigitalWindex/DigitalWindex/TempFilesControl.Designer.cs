@@ -1,4 +1,6 @@
-﻿namespace DesktopApp
+﻿using System.Windows.Forms;
+
+namespace DesktopApp
 {
     partial class TempFilesControl
     {
@@ -26,9 +28,8 @@
             this.btnCleanTempFiles = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
-            // 
+
             // tableLayoutPanel1
-            // 
             this.tableLayoutPanel1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
@@ -47,22 +48,20 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1005, 600);
             this.tableLayoutPanel1.TabIndex = 0;
-            // 
+
             // lblTitle
-            // 
             this.lblTitle.AutoSize = true;
             this.lblTitle.Dock = System.Windows.Forms.DockStyle.Top;
             this.lblTitle.Font = new System.Drawing.Font("Arial", 24F, System.Drawing.FontStyle.Bold);
-            this.lblTitle.ForeColor = System.Drawing.Color.MediumPurple;
+            this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(103, 80, 164);
             this.lblTitle.Location = new System.Drawing.Point(216, 20);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(573, 37);
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "Temporary Files";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
+
             // lblDescription
-            // 
             this.lblDescription.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblDescription.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.lblDescription.ForeColor = System.Drawing.Color.DimGray;
@@ -74,22 +73,24 @@
             this.lblDescription.Text = resources.GetString("lblDescription.Text");
             this.lblDescription.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblDescription.Click += new System.EventHandler(this.lblDescription_Click);
-            // 
+
             // btnCleanTempFiles
-            // 
-            this.btnCleanTempFiles.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnCleanTempFiles.Anchor = AnchorStyles.None;
             this.btnCleanTempFiles.AutoSize = true;
             this.btnCleanTempFiles.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
-            this.btnCleanTempFiles.Location = new System.Drawing.Point(408, 548);
+            this.btnCleanTempFiles.Margin = new Padding(0, 20, 0, 20); // Equal padding top/bottom
             this.btnCleanTempFiles.Name = "btnCleanTempFiles";
-            this.btnCleanTempFiles.Size = new System.Drawing.Size(189, 29);
-            this.btnCleanTempFiles.TabIndex = 2;
             this.btnCleanTempFiles.Text = "Clean Temporary Files";
-            this.btnCleanTempFiles.UseVisualStyleBackColor = true;
+            this.btnCleanTempFiles.BackColor = System.Drawing.Color.FromArgb(103, 80, 164);
+            this.btnCleanTempFiles.ForeColor = System.Drawing.Color.White;
+            this.btnCleanTempFiles.FlatStyle = FlatStyle.Flat;
+            this.btnCleanTempFiles.FlatAppearance.BorderSize = 0;
+            this.btnCleanTempFiles.UseVisualStyleBackColor = false;
+            this.btnCleanTempFiles.Padding = new Padding(20, 10, 20, 10);
             this.btnCleanTempFiles.Click += new System.EventHandler(this.BtnCleanTempFiles_Click);
-            // 
+
+
             // TempFilesControl
-            // 
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "TempFilesControl";
@@ -98,7 +99,6 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
-
         }
     }
 }

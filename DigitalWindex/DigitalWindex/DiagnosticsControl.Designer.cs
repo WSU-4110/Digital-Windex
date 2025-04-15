@@ -47,12 +47,19 @@
             // 
             // btnRunDiagnostics
             // 
+            this.btnRunDiagnostics = new System.Windows.Forms.Button();
             this.btnRunDiagnostics.Text = "Run Diagnostics";
             this.btnRunDiagnostics.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
             this.btnRunDiagnostics.Size = new System.Drawing.Size(180, 40);
             this.btnRunDiagnostics.Location = new System.Drawing.Point(400, 200);
             this.btnRunDiagnostics.Name = "btnRunDiagnostics";
+            this.btnRunDiagnostics.BackColor = System.Drawing.Color.FromArgb(103, 80, 164); // purple
+            this.btnRunDiagnostics.ForeColor = System.Drawing.Color.White; // white text
+            this.btnRunDiagnostics.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRunDiagnostics.FlatAppearance.BorderSize = 0;
+
             this.btnRunDiagnostics.Click += new System.EventHandler(this.BtnRunDiagnostics_Click);
+
 
             // 
             // DiagnosticsControl

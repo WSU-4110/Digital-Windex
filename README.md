@@ -12,6 +12,6 @@ This program allows users to maintain their Windows operating system swiftly and
 ## Authors
 - Angelo Kodra (anxhk7)
 - Kaavya Karnati (Kaavya-Karnati)
-- Reshma Shaik (reshma00)
+- Reshma Shaik (reshma010)
 - Clara Verani (CVbug)
 - Harini Kandi (Harini-Kandi)

@@ -40,7 +40,8 @@ namespace DesktopApp
             string[] buttonNames =
             {
         "Home", "Diagnostics", "Malware",
-        "Install", "Clean Corruption", "Updates", "Temporary Files"
+                "Install", "Clean Corruption", "Updates", "Temporary Files",
+                "Policy Checker", "Log"
     };
 
             // Clear existing controls from the side panel

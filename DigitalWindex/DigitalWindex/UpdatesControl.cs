@@ -27,5 +27,10 @@ namespace DesktopApp
             contentLayout.Left = (this.Width - contentLayout.Width) / 2;
             contentLayout.Top = (this.Height - contentLayout.Height) / 2;
         }
+
+        private void UpdatesControl_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

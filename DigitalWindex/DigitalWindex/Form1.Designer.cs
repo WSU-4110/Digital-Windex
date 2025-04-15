@@ -30,29 +30,31 @@ namespace DesktopApp
             this.lblTitle = new System.Windows.Forms.Label();
             this.lblWelcome = new System.Windows.Forms.Label();
             this.lblDescription = new System.Windows.Forms.Label();
-
             this.mainPanel.SuspendLayout();
             this.SuspendLayout();
-
             // 
             // sidePanel
             // 
-            this.sidePanel.BackColor = System.Drawing.Color.FromArgb(30, 30, 47);
+            this.sidePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(47)))));
             this.sidePanel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.sidePanel.Location = new System.Drawing.Point(0, 0);
             this.sidePanel.Name = "sidePanel";
-            this.sidePanel.Padding = new Padding(10);
-            this.sidePanel.Size = new System.Drawing.Size(220, 700);
-
+            this.sidePanel.Padding = new System.Windows.Forms.Padding(10);
+            this.sidePanel.Size = new System.Drawing.Size(294, 700);
+            this.sidePanel.TabIndex = 1;
             // 
             // mainPanel
             // 
-            this.mainPanel.BackColor = System.Drawing.Color.FromArgb(244, 246, 249);
-            this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mainPanel.Name = "mainPanel";
+            this.mainPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.mainPanel.Controls.Add(this.lblTitle);
             this.mainPanel.Controls.Add(this.lblWelcome);
             this.mainPanel.Controls.Add(this.lblDescription);
-
+            this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mainPanel.Location = new System.Drawing.Point(294, 0);
+            this.mainPanel.Name = "mainPanel";
+            this.mainPanel.Size = new System.Drawing.Size(906, 700);
+            this.mainPanel.TabIndex = 0;
+            this.mainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.mainPanel_Paint_1);
             // 
             // lblTitle
             // 
@@ -61,20 +63,20 @@ namespace DesktopApp
             this.lblTitle.ForeColor = System.Drawing.Color.Black;
             this.lblTitle.Location = new System.Drawing.Point(50, 40);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(248, 54);
+            this.lblTitle.Size = new System.Drawing.Size(304, 54);
+            this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "Digital Windex";
-
             // 
             // lblWelcome
             // 
             this.lblWelcome.AutoSize = true;
-            this.lblWelcome.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular);
+            this.lblWelcome.Font = new System.Drawing.Font("Segoe UI", 18F);
             this.lblWelcome.ForeColor = System.Drawing.Color.Black;
             this.lblWelcome.Location = new System.Drawing.Point(50, 100);
             this.lblWelcome.Name = "lblWelcome";
-            this.lblWelcome.Size = new System.Drawing.Size(195, 41);
+            this.lblWelcome.Size = new System.Drawing.Size(184, 41);
+            this.lblWelcome.TabIndex = 1;
             this.lblWelcome.Text = "Hello, reshu!";
-
             // 
             // lblDescription
             // 
@@ -84,9 +86,9 @@ namespace DesktopApp
             this.lblDescription.Location = new System.Drawing.Point(50, 150);
             this.lblDescription.MaximumSize = new System.Drawing.Size(900, 0);
             this.lblDescription.Name = "lblDescription";
-            this.lblDescription.Size = new System.Drawing.Size(500, 25);
+            this.lblDescription.Size = new System.Drawing.Size(525, 25);
+            this.lblDescription.TabIndex = 2;
             this.lblDescription.Text = "Digital Windex is an all-in-one maintenance tool for your PC.";
-
             // 
             // Form1
             // 
@@ -101,6 +103,7 @@ namespace DesktopApp
             this.mainPanel.ResumeLayout(false);
             this.mainPanel.PerformLayout();
             this.ResumeLayout(false);
+
         }
 
         #endregion

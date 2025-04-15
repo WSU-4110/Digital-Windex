@@ -117,4 +117,8 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="lblDescription.Text" xml:space="preserve">
+    <value>You are in the diagnostics section of Digital Windex. 
+When you click the button, diagnostics will automatically run on your hardware and CPU. This will help detect any issues early on, ensuring that your system runs smoothly and efficiently.  Having regular diagnostics can also extend the lifespan of your device by identifying problems before they worsen. It will only take a few moments and provide you with a status of your system's health.</value>
+  </data>
 </root>

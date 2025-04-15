@@ -44,7 +44,8 @@ namespace DesktopApp
             this.lblDescription.Name = "lblDescription";
             this.lblDescription.Size = new System.Drawing.Size(797, 50);
             this.lblDescription.TabIndex = 1;
-            this.lblDescription.Text = "Check your system policies to ensure that your system is secure. Policies may be changed due to malware or 3rd party access to your system.";
+            this.lblDescription.Text = "You are currently in the policy checker page of Digital Windex. \n" +
+                "Here, you can check your system policies to ensure that your system is secure. Policies may be changed due to malware or 3rd party access to your system.";
             this.lblDescription.TextAlign = System.Drawing.ContentAlignment.TopCenter;
 
             // btnCheckPolicies

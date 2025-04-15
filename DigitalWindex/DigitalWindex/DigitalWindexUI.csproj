@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>spray_icon_142665.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -180,6 +183,7 @@
     <Content Include="McAfeeStingerPortable\Other\Help\Images\Help_Logo_Top.png" />
     <Content Include="McAfeeStingerPortable\Other\Source\LauncherLicense.txt" />
     <Content Include="McAfeeStingerPortable\Other\Source\Readme.txt" />
+    <Content Include="spray_icon_142665.ico" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="McAfeeStingerPortable\App\Stinger\JAYS-DESKTOP\" />

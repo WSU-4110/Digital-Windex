@@ -59,7 +59,7 @@ namespace DesktopApp
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(153, 56);
             this.lblTitle.TabIndex = 0;
-            this.lblTitle.Text = "Install";
+            this.lblTitle.Text = "Log";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblDescription
@@ -74,7 +74,8 @@ namespace DesktopApp
             this.lblDescription.Name = "lblDescription";
             this.lblDescription.Size = new System.Drawing.Size(700, 250);
             this.lblDescription.TabIndex = 1;
-            this.lblDescription.Text = resources.GetString("lblDescription.Text");
+            this.lblDescription.Text = "You are currently in the log section of Digital Windex. \n Here, you can be taken to " +
+                "a log of Digital Windex tools you ran. The log includes what tool you used, including time and date!";
             this.lblDescription.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnStartInstall

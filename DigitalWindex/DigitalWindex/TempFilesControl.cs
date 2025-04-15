@@ -1,7 +1,6 @@
 ﻿using System;
 using System.IO;
 using System.Windows.Forms;
-using DigitalWindex.Backend;
 
 namespace DesktopApp
 {
@@ -19,84 +18,56 @@ namespace DesktopApp
 
         private void BtnCleanTempFiles_Click(object sender, EventArgs e)
         {
-            string[] cleanupPaths = new string[]
-            {
-                Path.GetTempPath(),
-                @"C:\Windows\Temp",
-                @"C:\Windows\SoftwareDistribution\Download",
-                @"C:\Windows\SoftwareDistribution\DeliveryOptimization",
-                @"C:\ProgramData\Microsoft\Windows\WER",
-                @"C:\Windows\Panther",
-                @"C:\Windows\Logs",
+            var confirm = MessageBox.Show("Are you sure you want to delete all temporary files?\nThis action cannot be undone.",
+                                          "Confirm Cleanup", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (confirm != DialogResult.Yes)
+                return;
 
-                Environment.ExpandEnvironmentVariables(@"%USERPROFILE%\AppData\Local\Microsoft\Windows\Explorer"),
-                Environment.ExpandEnvironmentVariables(@"%USERPROFILE%\AppData\Local\Microsoft\Windows\INetCache"),
-                Environment.ExpandEnvironmentVariables(@"%LocalAppData%\D3DSCache"),
-            };
-
-            int totalFilesDeleted = 0;
-            int totalDirsDeleted = 0;
-
-            foreach (string path in cleanupPaths)
-            {
-                if (!Directory.Exists(path)) continue;
-
-                CleanFolder(path, ref totalFilesDeleted, ref totalDirsDeleted);
-            }
-
-            MessageBox.Show(
-                $"Cleanup complete!\n\nRemoved {totalFilesDeleted} files and {totalDirsDeleted} directories from various temp locations.",
-                "Cleanup Complete",
-                MessageBoxButtons.OK,
-                MessageBoxIcon.Information
-            );
-
-            LOG.WriteLog();
-        }
-
-        /// <summary>
-        /// Cleans all files and subdirectories in the given folder.
-        /// Files/folders in use or without proper permissions will be skipped.
-        /// </summary>
-        private void CleanFolder(string folderPath, ref int fileCount, ref int dirCount)
-        {
             try
             {
-                // Delete all files in the folder
-                foreach (string file in Directory.GetFiles(folderPath))
+                btnCleanTempFiles.Enabled = false;
+                btnCleanTempFiles.Text = "Cleaning...";
+
+                string tempPath = Path.GetTempPath();
+                int fileCount = 0;
+                int dirCount = 0;
+
+                foreach (string file in Directory.GetFiles(tempPath))
                 {
                     try
                     {
                         File.Delete(file);
                         fileCount++;
                     }
-                    catch
-                    {
-                        // Ignore locked or access-denied files
-                    }
+                    catch { /* Ignore access denied/in-use files */ }
                 }
 
-                // Delete all subdirectories
-                foreach (string dir in Directory.GetDirectories(folderPath))
+                foreach (string dir in Directory.GetDirectories(tempPath))
                 {
                     try
                     {
                         Directory.Delete(dir, true);
                         dirCount++;
                     }
-                    catch
-                    {
-                        // Ignore locked or access-denied directories
-                    }
+                    catch { /* Ignore access denied/in-use dirs */ }
                 }
+
+                MessageBox.Show($"Cleanup complete!\n\nRemoved {fileCount} files and {dirCount} directories from the temporary folder.",
+                                "Cleanup Complete", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error cleaning {folderPath}: {ex.Message}");
+                MessageBox.Show("Error cleaning temporary files: " + ex.Message,
+                                "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                btnCleanTempFiles.Text = "Clean Temporary Files";
+                btnCleanTempFiles.Enabled = true;
             }
         }
 
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        private void lblDescription_Click(object sender, EventArgs e)
         {
 
         }

@@ -36,7 +36,7 @@
             // lblDescription
             this.lblDescription.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Italic);
             this.lblDescription.ForeColor = System.Drawing.Color.DimGray;
-            this.lblDescription.Text = "Run system diagnostics to detect any underlying issues. This helps ensure your PC is operating smoothly.";
+            this.lblDescription.Text = "You are in the diagnostics section of Digital Windex. \nRun system diagnostics to detect any underlying issues. This helps ensure your PC is operating smoothly.";
             this.lblDescription.AutoSize = true;
             this.lblDescription.MaximumSize = new System.Drawing.Size(800, 0); // <-- this enables word wrap
             this.lblDescription.Location = new System.Drawing.Point(150, 120);

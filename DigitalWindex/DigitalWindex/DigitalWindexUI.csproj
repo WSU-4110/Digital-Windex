@@ -191,5 +191,11 @@
   <ItemGroup>
     <Folder Include="McAfeeStingerPortable\App\Stinger\JAYS-DESKTOP\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DigitalWindex.Services\DigitalWindex.Services.csproj">
+      <Project>{1db57320-ac71-4027-bdab-c5bc7ae57029}</Project>
+      <Name>DigitalWindex.Services</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

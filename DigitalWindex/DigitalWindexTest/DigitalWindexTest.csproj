@@ -1,0 +1,42 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+	<!-- Changed to support Windows Forms -->
+
+	<PropertyGroup>
+		<TargetFramework>net8.0-windows</TargetFramework>
+		<!-- Added `-windows` to allow Windows-only APIs -->
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<UseWindowsForms>true</UseWindowsForms>
+		<!-- Enables access to System.Windows.Forms -->
+
+		<IsPackable>false</IsPackable>
+		<IsTestProject>true</IsTestProject>
+		<PlatformTarget>x86</PlatformTarget>
+		<!-- Matches the main project (32-bit) -->
+	</PropertyGroup>
+
+	<ItemGroup>
+		<!-- Unit test and mocking libraries -->
+		<PackageReference Include="coverlet.collector" Version="6.0.0" />
+		<PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.8.0" />
+		<PackageReference Include="Moq" Version="4.20.72" />
+		<PackageReference Include="xunit" Version="2.5.3" />
+		<PackageReference Include="xunit.runner.visualstudio" Version="2.5.3" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<!-- Reference to your main app project -->
+		<ProjectReference Include="..\DigitalWindex\DigitalWindexUI.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<!-- (Optional) If you're using global usings -->
+		<Using Include="Xunit" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<!-- This allows access to MessageBox, DialogResult, etc. -->
+		<FrameworkReference Include="Microsoft.WindowsDesktop.App.WindowsForms" />
+	</ItemGroup>
+
+</Project>

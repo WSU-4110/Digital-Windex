@@ -28,6 +28,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		DiagnosticsControl.cs = DiagnosticsControl.cs
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigitalWindexTest", "DigitalWindexTest\DigitalWindexTest.csproj", "{872AC6B3-080F-4675-8C0A-07ED9706801D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -38,9 +40,16 @@ Global
 		{6B2A8F24-4B44-4378-95BC-4F94729DA8B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6B2A8F24-4B44-4378-95BC-4F94729DA8B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6B2A8F24-4B44-4378-95BC-4F94729DA8B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{872AC6B3-080F-4675-8C0A-07ED9706801D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{872AC6B3-080F-4675-8C0A-07ED9706801D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{872AC6B3-080F-4675-8C0A-07ED9706801D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{872AC6B3-080F-4675-8C0A-07ED9706801D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{872AC6B3-080F-4675-8C0A-07ED9706801D} = {B74F4E9F-21BE-4007-88D4-D6D245AD69FC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {20F4F245-ACB3-4545-B9B8-83ADAFBDF83C}

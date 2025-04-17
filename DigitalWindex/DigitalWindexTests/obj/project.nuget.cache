@@ -1,0 +1,30 @@
+{
+  "version": 2,
+  "dgSpecHash": "p5jtysysnRs=",
+  "success": false,
+  "projectFilePath": "C:\\Users\\reshu\\OneDrive\\Desktop\\Wayne\\winter 2025\\software engineering\\digitalwindex\\DigitalWindex3.4\\DigitalWindex\\DigitalWindexTests\\DigitalWindexTests.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\reshu\\.nuget\\packages\\microsoft.codecoverage\\17.8.0\\microsoft.codecoverage.17.8.0.nupkg.sha512",
+    "C:\\Users\\reshu\\.nuget\\packages\\microsoft.net.test.sdk\\17.8.0\\microsoft.net.test.sdk.17.8.0.nupkg.sha512",
+    "C:\\Users\\reshu\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\reshu\\.nuget\\packages\\microsoft.testplatform.objectmodel\\17.8.0\\microsoft.testplatform.objectmodel.17.8.0.nupkg.sha512",
+    "C:\\Users\\reshu\\.nuget\\packages\\microsoft.testplatform.testhost\\17.8.0\\microsoft.testplatform.testhost.17.8.0.nupkg.sha512",
+    "C:\\Users\\reshu\\.nuget\\packages\\netstandard.library\\2.0.0\\netstandard.library.2.0.0.nupkg.sha512",
+    "C:\\Users\\reshu\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\reshu\\.nuget\\packages\\nuget.frameworks\\6.5.0\\nuget.frameworks.6.5.0.nupkg.sha512",
+    "C:\\Users\\reshu\\.nuget\\packages\\nunit\\3.13.3\\nunit.3.13.3.nupkg.sha512",
+    "C:\\Users\\reshu\\.nuget\\packages\\nunit3testadapter\\4.3.1\\nunit3testadapter.4.3.1.nupkg.sha512",
+    "C:\\Users\\reshu\\.nuget\\packages\\system.reflection.metadata\\1.6.0\\system.reflection.metadata.1.6.0.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1104",
+      "level": "Error",
+      "message": "Unable to find project 'C:\\Users\\reshu\\OneDrive\\Desktop\\Wayne\\winter 2025\\software engineering\\digitalwindex\\DigitalWindex3.4\\DigitalWindex\\DigitalWindexUI\\DigitalWindexUI.csproj'. Check that the project reference is valid and that the project file exists.",
+      "libraryId": "C:\\Users\\reshu\\OneDrive\\Desktop\\Wayne\\winter 2025\\software engineering\\digitalwindex\\DigitalWindex3.4\\DigitalWindex\\DigitalWindexUI\\DigitalWindexUI.csproj",
+      "targetGraphs": [
+        "net6.0-windows7.0"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+C:\Users\reshu\OneDrive\Desktop\Wayne\winter 2025\software engineering\digitalwindex\DigitalWindex3.4\DigitalWindex\DigitalWindexTests\obj\Debug\net8.0\DigitalWindexTests.csproj.AssemblyReference.cache
+C:\Users\reshu\OneDrive\Desktop\Wayne\winter 2025\software engineering\digitalwindex\DigitalWindex3.4\DigitalWindex\DigitalWindexTests\obj\Debug\net8.0\DigitalWindexTests.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\reshu\OneDrive\Desktop\Wayne\winter 2025\software engineering\digitalwindex\DigitalWindex3.4\DigitalWindex\DigitalWindexTests\obj\Debug\net8.0\DigitalWindexTests.AssemblyInfoInputs.cache
+C:\Users\reshu\OneDrive\Desktop\Wayne\winter 2025\software engineering\digitalwindex\DigitalWindex3.4\DigitalWindex\DigitalWindexTests\obj\Debug\net8.0\DigitalWindexTests.AssemblyInfo.cs
+C:\Users\reshu\OneDrive\Desktop\Wayne\winter 2025\software engineering\digitalwindex\DigitalWindex3.4\DigitalWindex\DigitalWindexTests\obj\Debug\net8.0\DigitalWindexTests.csproj.CoreCompileInputs.cache
+C:\Users\reshu\OneDrive\Desktop\Wayne\winter 2025\software engineering\digitalwindex\DigitalWindex3.4\DigitalWindex\DigitalWindexTests\obj\Debug\net8.0\DigitalWindexTests.sourcelink.json

@@ -93,6 +93,9 @@
       <DependentUpon>UpdatesControl.cs</DependentUpon>
     </Compile>
     <Compile Include="WindowsRecoveryLauncher.cs" />
+    <EmbeddedResource Include="CleanCorruptionForm.resx">
+      <DependentUpon>CleanCorruptionForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DiagnosticsControl.resx">
       <DependentUpon>DiagnosticsControl.cs</DependentUpon>
     </EmbeddedResource>

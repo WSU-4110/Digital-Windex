@@ -26,20 +26,22 @@ foreach ($c in $cpu) {
 }
 ";
 
-            string tempScriptPath = Path.Combine(Path.GetTempPath(), "smartcheck.ps1");
-            File.WriteAllText(tempScriptPath, script);
-
-            ProcessStartInfo psi = new ProcessStartInfo
-            {
-                FileName = "powershell.exe",
-                Arguments = $"-ExecutionPolicy Bypass -NoProfile -File \"{tempScriptPath}\"",
-                RedirectStandardOutput = true,
-                UseShellExecute = false,
-                CreateNoWindow = true
-            };
+            // Option 1: Unique temp file (safer for parallel runs)
+            string tempScriptPath = Path.Combine(Path.GetTempPath(), $"smartcheck_{Guid.NewGuid()}.ps1");
 
             try
             {
+                File.WriteAllText(tempScriptPath, script);
+
+                ProcessStartInfo psi = new ProcessStartInfo
+                {
+                    FileName = "powershell.exe",
+                    Arguments = $"-ExecutionPolicy Bypass -NoProfile -File \"{tempScriptPath}\"",
+                    RedirectStandardOutput = true,
+                    UseShellExecute = false,
+                    CreateNoWindow = true
+                };
+
                 using (Process process = Process.Start(psi))
                 {
                     string output = process.StandardOutput.ReadToEnd();
@@ -50,6 +52,16 @@ foreach ($c in $cpu) {
             catch (Exception ex)
             {
                 return $"An error occurred while executing diagnostics: {ex.Message}";
+            }
+            finally
+            {
+                // Clean up the script file
+                try
+                {
+                    if (File.Exists(tempScriptPath))
+                        File.Delete(tempScriptPath);
+                }
+                catch { /* ignore delete error */ }
             }
         }
     }

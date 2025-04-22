@@ -26,7 +26,7 @@ This document explains how to install **Digital Windex** on a Windows machine us
 ## Running the Installer
 
 1. **Locate** the downloaded file in your `Downloads` folder.
-2. **Right‑click** the MSI or EXE and choose **Run as administrator**.
+2. **Right‑click** the MSI (ALWAYS USE THE MSI FIRST!) or EXE and choose **Run as administrator**.
 3. Follow the on‑screen prompts:
    - Accept the license agreement.
    - Choose an install folder (default: `C:\Program Files\DigitalWindex`).
